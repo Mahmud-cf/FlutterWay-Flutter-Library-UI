@@ -1,0 +1,137 @@
+
+:root{
+  --textLite:#989898;
+  --textDark:#111111;
+  --bgLite: #F0F0F0;
+  --White: #fff;
+  --bgLiteDark: #334155;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* color:var(--textDark) */
+}
+.text-lite{
+  color: #989898;
+}
+.bg-lite{
+  background-color: var(--bgLite);
+}
+
+
+
+
+.logo img{
+  margin-left:1.3rem;
+}
+.menu-item{
+  margin-top:0!important;
+}
+.nav-item-ul li:first-child{
+  background-color: var(--bgLite)!important;
+  font-size: 14px;
+  color: var(--textDark)!important;
+}
+.dark .nav-item-ul li:first-child{
+  background-color: var(--bgLiteDark)!important;
+  font-size: 14px;
+  
+}
+.dark .nav-item-ul li:first-child a{
+  color: var(--White)!important;
+}
+.nav-item-ul li{
+  color: var(--textLite)!important;
+}
+.search-button button{
+  width:380px;
+  height: 48px!important;
+}
+.button-border{
+  border:1px solid var(--bgLite)
+}
+.button-border:hover{
+  background-color: var(--bgLite);
+  transition: .3s;
+  
+}
+.dark .button-border{
+  border: 1px solid #d1d0d0;
+  color:#fff;
+}
+.hero-title .title-width{
+  width:38rem;
+}
+.hero-title h1{
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.filter-button{
+  border-right:2px solid #ddd;
+  padding-right:1rem;
+  margin-right:1rem;
+}
+.screens-menu-item span{
+  border:1px solid var(--bgLite)
+}
+.screens-menu-item span:first-child{
+  background-color: var(--textDark);
+  color:#fff;
+}
+.screens-menu-item span:hover{
+  background-color: var(--bgLite);
+  transition: .2s;
+  cursor: pointer;
+}
+
+.shaddow-img{
+  border-radius: 0 0px 16px 16px;
+  display: none;
+}
+
+.scrnImg:hover .scrn-button-copy-img, .scrnImg:hover .scrn-button-copy-button{
+  display: flex!important;
+  transition: .3s!important;
+}
+.scrnImg:hover .shaddow-img{
+  display: block;
+  transition: .3s!important;
+}
+
+.scrn-button-copy-img{
+  left:15px;
+  bottom:23px;
+}
+.scrn-button-copy-button{
+  width:125px;
+  left:85px;
+  bottom:24px;
+}
+.copywright{
+  margin-top:1.5rem;
+  padding:1rem 0;
+  padding-bottom:0;
+  border-top:1px solid var(--bgLite)
+}
+
+
+
+.screens-menu-item::-webkit-scrollbar, .sideNav-scroll::-webkit-scrollbar {
+  height: 2px;
+}
+.sideNav-scroll::-webkit-scrollbar {
+  width:2px;
+}
+.screens-menu-item::-webkit-scrollbar-track, .sideNav-scroll::-webkit-scrollbar-track {
+  background: #d3ddf8;
+}
+.screens-menu-item::-webkit-scrollbar-thumb,  .sideNav-scroll::-webkit-scrollbar-thumb {
+  background: #4566fd; 
+}
+
+.screens-menu-item::-webkit-scrollbar-thumb:hover, .sideNav-scroll::-webkit-scrollbar-thumb:hover {
+  background: #012058; 
+}

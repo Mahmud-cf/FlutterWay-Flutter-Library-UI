@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dark{
+    background-color: #020617;
+    font-size: 500;
+}
