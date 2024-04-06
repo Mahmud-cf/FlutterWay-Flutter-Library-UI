@@ -16,4 +16,7 @@ https://flutter-way.netlify.app/
 - Side Nav in full screen, Bottom Nav in small screen
 - Fully responsive
 
+## Tech Stack
+
+**React, TailwindCSS** 
 
