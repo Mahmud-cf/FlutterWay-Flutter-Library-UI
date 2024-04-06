@@ -12,7 +12,7 @@ function Home({ darkMode, setDarkMode }) {
       <div className="header-wrapper">
         <SideNav />
 
-        <div className="p-4 sm:ml-48">
+        <div className="p-1 sm:p-4 lg:ml-48">
             <Hero darkMode={darkMode} setDarkMode={setDarkMode}  />
             <Templates/>
             <Article/>

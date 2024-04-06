@@ -35,12 +35,12 @@ function Screens() {
           <img src={right} alt="" />
         </div>
       </div>
-      <div className="screens-image-wrapper grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mt-5">
+      <div className="screens-image-wrapper grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4  lg:grid-cols-5 gap-2 mt-5">
         {screensImg.map((scrnImg) => (
           <div key={scrnImg.id} className="mb-3 relative z-0 scrn-img scrnImg">
-            <img className="cursor-pointer" src={scrnImg.img} alt="" />
+            <img className="cursor-pointer mx-auto" src={scrnImg.img} alt="" />
             <img
-              className="absolute left-0 right-0 z-10 shaddow-img bottom-0.5"
+              className="absolute mx-auto left-0 right-0 z-10 shaddow-img bottom-0.5"
               src={shaddow}
               alt=""
             />

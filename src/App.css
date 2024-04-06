@@ -19,6 +19,9 @@
 .bg-lite{
   background-color: var(--bgLite);
 }
+.white-bg{
+  background-color: var(--White)!important;
+}
 
 
 
@@ -78,6 +81,10 @@
   border:1px solid var(--bgLite)
 }
 .screens-menu-item span:first-child{
+  background-color: var(--textDark);
+  color:#fff;
+}
+.screens-menu-item span:first-child:hover{
   background-color: var(--textDark);
   color:#fff;
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import searchIcon from "../assets/search.png";
+import logo from "../assets/Logo.png";
 
 function Hero({ darkMode, setDarkMode }) {
   return (
     <div>
-      <div className="header-nav-wrapper flex justify-between">
+      <div className="header-nav-wrapper flex justify-between items-center">
         <div className="search-button">
           <button
             type="button"
@@ -30,6 +31,7 @@ function Hero({ darkMode, setDarkMode }) {
             )}
             <span className="flex-auto">Search...</span>
           </button>
+          <div><img className="sm:hidden w-32" src={logo} alt="" /></div>
         </div>
         <div className="header-nav-right-part flex items-center">
           <div
@@ -75,10 +77,10 @@ function Hero({ darkMode, setDarkMode }) {
               </svg>
             )}
           </div>
-          <button className="w-24 ml-4 bg-white rounded-xl text-black p-3 font-semibold button-border dark:bg-black ">
+          <button className="w-20 sm:w-24 ml-4 bg-white rounded-xl text-black p-2 sm:p-3 font-semibold button-border dark:bg-black ">
             Log in
           </button>
-          <button className="w-24 ml-4 bg-black rounded-xl text-white p-3 font-semibold dark:bg-white dark:text-black ">
+          <button className="w-20 sm:w-24 ml-4 bg-black rounded-xl text-white p-2 sm:p-3 font-semibold dark:bg-white dark:text-black ">
             Get Pro
           </button>
         </div>

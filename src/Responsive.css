@@ -1,0 +1,79 @@
+:root{
+    --textLite:#989898;
+    --textDark:#111111;
+    --bgLite: #F0F0F0;
+    --White: #fff;
+    --bgLiteDark: #334155;
+  }
+
+@media screen and (max-width:1024px) {
+  *{
+    max-width:100%;
+  }
+    .sideNav{
+        border-top:2px solid var(--textLite)!important;
+    }
+    .sideNav div{
+        background-color: #020617!important;
+    }
+    .nav-item-ul li:first-child{
+        background-color: var(--bgLiteDark)!important;
+        font-size: 14px;
+        color: var(--White)!important;
+      }
+      .nav-item-ul::-webkit-scrollbar{
+        height: 2px;
+      }
+      .nav-item-ul::-webkit-scrollbar-track{
+        background: #4566fd; 
+      }
+      .nav-item-ul::-webkit-scrollbar-thumb {
+        
+        background: #d3ddf8;
+      }
+      
+      .nav-item-ul::-webkit-scrollbar-thumb:hover{
+        background: #012058; 
+      }
+      .scrn-button-copy-img{
+        font-size: 14px;
+        width:2.5rem;
+        padding:1px 2px!important;
+        left:32px;
+      }
+      .scrn-button-copy-button{
+        width:5rem;
+        font-size: 14px;
+        padding:1px 2px!important;
+        left:80px;
+      }
+}
+
+@media screen and (max-width:776px){
+    .hero-title .title-width{
+        width:100%;
+        padding-left:3rem;
+        padding-right:3rem;
+    }
+    .hero-title h1{
+        font-size: 32px;
+        line-height: 35px;
+    }
+    .scrnImg:hover .scrn-button-copy-img, .scrnImg:hover .scrn-button-copy-button{
+        display: none!important;
+      }
+} 
+@media screen and (max-width:500px){
+    .hero-title .title-width{
+        width:100%;
+        padding-left:1rem;
+        padding-right:1rem;
+    }
+    .hero-title h1{
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .hero-title p{
+        font-size: 13px;
+    }
+} 

@@ -12,7 +12,7 @@ function Article() {
           See all
         </p>
       </div>
-      <div className="template-wrapper grid grid-cols-2 sm:grid-cols-3 gap-4 ">
+      <div className="template-wrapper grid grid-cols-2 md:grid-cols-3 gap-4 ">
         {Articles.map((tempItem) => (
           <div key={tempItem.id}>
             <img className="cursor-pointer" src={tempItem.img} alt="" />

@@ -6,21 +6,21 @@ function SideNav() {
   return (
     <aside
       id="default-sidebar"
-      className="fixed top-0 left-0 z-40 w-48 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r-2 border-slate-100 dark:border-slate-900"
+      className="sideNav fixed w-full lg:w-48 bottom-0  lg:top-0 lg:left-0 z-40  lg:h-screen transition-transform  sm:translate-x-0  border-r-2 border-solid border-slate-200 dark:border-slate-900"
       aria-label="Sidebar"
     >
-      <div className="h-full overflow-y-auto sideNav-scroll bg-white dark:bg-slate-950 ">
-        <div className="logo pt-4">
+      <div className="h-full flex lg:block overflow-y-auto sideNav-scroll bg-white dark:bg-slate-950">
+        <div className="logo pt-4 hidden lg:block">
           <img src={logo} alt="" className="w-36 mb-5" />
         </div>
 
-        <ul className="space-y-2 font-medium nav-item-ul"> 
+        <ul className="space-y-2 font-medium nav-item-ul flex lg:block lg:overflow-x-hidden overflow-x-scroll"> 
           {menuLi.map((menuItem) => {
             return (
-              <li key={menuItem.id} className="menu-item">
+              <li key={menuItem.id} className="menu-item whitespace-nowrap lg:whitespace-normal">
                 <a
                   href="#"
-                  className="flex items-center p-2 pl-5 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm hover:text-black"
+                  className="flex flex-col lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
                 >
                   <img src={menuItem.icon} alt="" />
                   <span className="ml-2">{menuItem.name}</span>
@@ -29,7 +29,7 @@ function SideNav() {
             );
           })}
         </ul>
-        <ul className="space-y-2 All-Screens font-medium nav-item-ul mt-5">
+        <ul className="space-y-2 All-Screens font-medium nav-item-ul mt-5 hidden lg:block">
           <h6 className="pl-5 dark:text-white ">All Screens</h6>
           {AllScreens.map((menuItem) => {
             return (

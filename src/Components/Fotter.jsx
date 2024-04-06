@@ -8,7 +8,7 @@ import logo from '../assets/Logo.png'
 function Fotter() {
   return (
     <div className="pt-7" >
-      <div className=" flex justify-between" >
+      <div className=" flex justify-between flex-col sm:flex-row " >
       <div className="footer-left">
         <img src={logo} alt="Logo" className="w-44" />
         <p className="text-lite text-xs" >
@@ -33,7 +33,7 @@ function Fotter() {
           
         </div>
       </div>
-      <div className="footer-right flex gap-10 dark:text-white">
+      <div className="footer-right flex gap-10 dark:text-white mt-7 sm:mt-0">
         <div className="footer-right-menu">
             <p className="mb-3 font-semibold" >Explore</p>
             <p className=" text-sm mb-2" >Blog</p>
@@ -48,9 +48,9 @@ function Fotter() {
         </div>
       </div>
       </div>
-      <div className="flex justify-between copywright text-lite">
-        <p className="mb-0" >Copyright 2024 TheFlutterLibrary. All rights reserved.</p>
-        <p className="mb-0" >Privacy Policy | Terms & Conditions | Cookie Policy</p>
+      <div className="flex justify-between flex-col text-center sm:text-left sm:flex-row copywright text-lite mb-16 lg:mb-0">
+        <p className="mb-0 text-xs sm:text-md " >Copyright 2024 TheFlutterLibrary. All rights reserved.</p>
+        <p className="mb-0 text-xs sm:text-md " >Privacy Policy | Terms & Conditions | Cookie Policy</p>
       </div>
     </div>
   );
