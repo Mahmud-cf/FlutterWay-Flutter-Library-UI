@@ -1,4 +1,4 @@
-import navIcon1 from './assets/navIcon1.png'
+import navIcon1 from './assets/try.svg'
 import navIcon2 from './assets/navIcon2.png'
 import navIcon3 from './assets/navIcon3.png'
 import navIcon4 from './assets/navIcon4.png'
@@ -138,6 +138,48 @@ export const template = [
     comment: 29,
     download: 546
   },
+  {
+    id:7,
+    img: temp1,
+    title: 'Foodly Restaurent App Template',
+    comment: 29,
+    download: 546
+  },
+  {
+    id:8,
+    img: temp2,
+    title: 'Foodly Restaurent App Template',
+    comment: 29,
+    download: 546
+  },
+  {
+    id:9,
+    img: temp3,
+    title: 'Foodly Restaurent App Template',
+    comment: 29,
+    download: 546
+  },
+  {
+    id:10,
+    img: temp4,
+    title: 'Foodly Restaurent App Template',
+    comment: 29,
+    download: 546
+  },
+  {
+    id:11,
+    img: temp5,
+    title: 'Foodly Restaurent App Template',
+    comment: 29,
+    download: 546
+  },
+  {
+    id:12,
+    img: temp6,
+    title: 'Foodly Restaurent App Template',
+    comment: 29,
+    download: 546
+  },
 ]
 
 export const Articles = [
@@ -153,6 +195,21 @@ export const Articles = [
   },
   {
     id:3,
+    title: 'Parallax Scroll Effect with PageView in Flutter',
+    img: art3
+  },
+  {
+    id:4,
+    title: 'Learn Flutter animation',
+    img: art1
+  },
+  {
+    id:5,
+    title: 'Onboarding Screen with Carousel & Animated Dots',
+    img: art2
+  },
+  {
+    id:6,
     title: 'Parallax Scroll Effect with PageView in Flutter',
     img: art3
   },
@@ -220,7 +277,7 @@ export const screensImg = [
   },
   {
     id:3,
-    img: scrn3
+    img: scrn1
   },
   {
     id:4,
@@ -248,6 +305,46 @@ export const screensImg = [
   },
   {
     id:10,
+    img: scrn10
+  },
+  {
+    id:11,
+    img: scrn1
+  },
+  {
+    id:12,
+    img: scrn2
+  },
+  {
+    id:13,
+    img: scrn1
+  },
+  {
+    id:14,
+    img: scrn4
+  },
+  {
+    id:15,
+    img: scrn5
+  },
+  {
+    id:16,
+    img: scrn6
+  },
+  {
+    id:17,
+    img: scrn7
+  },
+  {
+    id:18,
+    img: scrn8
+  },
+  {
+    id:19,
+    img: scrn9
+  },
+  {
+    id:20,
     img: scrn10
   },
 ]

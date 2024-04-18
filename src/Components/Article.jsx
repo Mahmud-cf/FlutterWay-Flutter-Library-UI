@@ -1,21 +1,33 @@
-import React from "react";
-import { Articles } from "../AllData";
-import commentIcon from "../assets/comment.png";
-import downloadIcon from "../assets/download.png";
+import React, { useState } from "react";
+import TemplateModal from "./TemplateModal";
 
-function Article() {
+function Article({articleSlice}) {
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleShowItem = (tempItem) => {
+    setSelectedItem(tempItem);
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    setSelectedItem(null);
+  };
+
   return (
     <div className="mt-7" >
       <div className="template-title flex justify-between items-center mb-5">
         <h2 className="text-2xl font-normal dark:text-white">Articles</h2>
-        <p className="text-lite text-sm cursor-pointer dark:hover:text-white  hover:underline hover:text-black ">
+        <a href="./article"><p className="text-lite text-sm cursor-pointer dark:hover:text-white  hover:underline hover:text-black ">
           See all
-        </p>
+        </p></a>
       </div>
       <div className="template-wrapper grid grid-cols-2 md:grid-cols-3 gap-4 ">
-        {Articles.map((tempItem) => (
-          <div key={tempItem.id}>
-            <img className="cursor-pointer" src={tempItem.img} alt="" />
+        {articleSlice.map((tempItem) => (
+          <div key={tempItem.id}  onClick={() => handleShowItem(tempItem)} >
+            <img className="cursor-pointer hover:scale-105 transition-all" src={tempItem.img} alt="" />
             <div className="py-2">
                 <div className="text-lite text-xs mb-1" >
                     <span>Mar 24, 2024</span>
@@ -28,6 +40,11 @@ function Article() {
           </div>
         ))}
       </div>
+      {showPopup && (
+        <div className="popup">
+          <TemplateModal handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
+        </div>
+      )}
     </div>
   );
 }

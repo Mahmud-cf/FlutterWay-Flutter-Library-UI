@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import SideNav from "../Components/SideNav";
 import Hero from "../Components/Hero";
 import Templates from "../Components/Templates";
 import Article from "../Components/Article";
 import Screens from "../Components/Screens";
 import Fotter from "../Components/Fotter";
+import HeroText from "../Components/HeroText";
+import { template, Articles, screensImg } from "../AllData";
 
-function Home({ darkMode, setDarkMode }) {
+function Home() {
+
+  const [mode, setMode] = useState('light');
+
+  const toggleMode = (newMode) => {
+    setMode(newMode);
+  };
+
+  const tempalteSlice = template.slice(0,6)
+  const articleSlice = Articles.slice(0,3)
+  const screensImgSlice = screensImg.slice(0,10)
+
   return (
-    <div>
+    <div  className={`${mode === 'dark' ? 'dark' : ''}`} >
       <div className="header-wrapper">
         <SideNav />
 
         <div className="p-1 sm:p-4 lg:ml-48">
-            <Hero darkMode={darkMode} setDarkMode={setDarkMode}  />
-            <Templates/>
-            <Article/>
-            <Screens/>
+            <Hero mode={mode} setMode={setMode} toggleMode={toggleMode}  />
+            <HeroText/>
+            <Templates tempalteSlice = {tempalteSlice} />
+            <Article articleSlice={articleSlice} />
+            <Screens screensImgSlice ={screensImgSlice} />
             <Fotter/>
         </div>
       </div>

@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { ScreensMenu, screensImg } from "../AllData";
 import filter from "../assets/filter.png";
 import right from "../assets/right.png";
 import shaddow from "../assets/shaddow.png";
 import copy from "../assets/book.png";
+import TemplateModal from "./TemplateModal";
 
-function Screens() {
+function Screens({screensImgSlice}) {
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleShowItem = (tempItem) => {
+    setSelectedItem(tempItem);
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    setSelectedItem(null);
+  };
+
   return (
     <div className="mt-7">
       <div className="template-title flex justify-between items-center mb-5">
         <h2 className="text-2xl font-normal dark:text-white">Screens</h2>
         <p className="text-lite text-sm cursor-pointer dark:hover:text-white  hover:underline hover:text-black ">
-          See all
+          <a href="./screens">See all</a>
         </p>
       </div>
       <div className="screens-menu flex items-center">
@@ -22,8 +37,7 @@ function Screens() {
           </div>
         </div>
         <div className="flex screens-menu-item pb-2 overflow-x-auto gap-1 items-center">
-          {" "}
-          {/* Apply overflow-x-auto for horizontal scrolling */}
+          
           {ScreensMenu.map((screenMenuItem) => (
             <span
               className="py-1 px-3 rounded-3xl whitespace-nowrap dark:text-white dark:hover:text-black "
@@ -36,8 +50,8 @@ function Screens() {
         </div>
       </div>
       <div className="screens-image-wrapper grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4  lg:grid-cols-5 gap-2 mt-5">
-        {screensImg.map((scrnImg) => (
-          <div key={scrnImg.id} className="mb-3 relative z-0 scrn-img scrnImg">
+        {screensImgSlice.map((scrnImg) => (
+          <div key={scrnImg.id}  onClick={() => handleShowItem(scrnImg)} className="mb-3 relative z-0 scrn-img scrnImg">
             <img className="cursor-pointer mx-auto" src={scrnImg.img} alt="" />
             <img
               className="absolute mx-auto left-0 right-0 z-10 shaddow-img bottom-0.5"
@@ -54,6 +68,11 @@ function Screens() {
           </div>
         ))}
       </div>
+      {showPopup && (
+        <div className="popup">
+          <TemplateModal handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
+        </div>
+      )}
     </div>
   );
 }

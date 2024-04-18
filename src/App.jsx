@@ -4,23 +4,16 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import "./Responsive.css";
 import Home from "./Pages/Home";
+import AllRouter from "./AllRouter/AllRouter";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
-
+  
   return (
-    <div className={darkMode ? "dark" : ""}>
-      <Home darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div>
+      <AllRouter/>
     </div>
   );
 }
 
 export default App;
+

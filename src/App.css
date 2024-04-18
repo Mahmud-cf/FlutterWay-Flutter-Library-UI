@@ -22,6 +22,9 @@
 .white-bg{
   background-color: var(--White)!important;
 }
+.bg-mydark{
+  background-color: var(--bgLiteDark);
+}
 
 
 
@@ -32,6 +35,17 @@
 .menu-item{
   margin-top:0!important;
 }
+.menu-item:hover a svg path{
+  fill:#111;
+}
+.mode-item-wrapper{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  left:-135px;
+  top:57px;
+  padding:5px;
+  border-radius: 9px;
+}
+
 .nav-item-ul li:first-child{
   background-color: var(--bgLite)!important;
   font-size: 14px;
@@ -141,4 +155,75 @@
 
 .screens-menu-item::-webkit-scrollbar-thumb:hover, .sideNav-scroll::-webkit-scrollbar-thumb:hover {
   background: #012058; 
+}
+
+.text-underline:hover{
+  text-decoration: underline;
+}
+.the-pop-up{
+  /* filter: blur(80px);
+  -webkit-filter: blur(80px); */
+  background-color: #6e6d6d69;
+  backdrop-filter: blur(2px);
+}
+.the-pop-up .popup{
+  width:27rem;
+}
+.the-pop-up .priceing{
+  width:40rem!important;
+}
+.the-pop-up .search-popup{
+  width:90%!important;
+  height: calc(100vh - 2rem);
+  overflow-y: scroll;
+}
+.the-pop-up .search-popup .screens-menu{
+  display: none;
+}
+.priceing-month {
+  border:1px solid var(--bgLite)
+}
+.active-item{
+  background-color: black!important;
+  color:var(--White)!important;
+}
+.search-nav-item span {
+  border: 1px solid var(--bgLite);
+  background-color: var(--White);
+}
+.search-nav-item span:hover{
+  background-color: var(--bgLite);
+}
+
+
+.temp-det-wrapper .template-title, .temp-det-wrapper .screens-menu {
+  display:none;
+}
+.sponser{
+  border:1px solid var(--bgLite)
+}
+.sponser span{
+  border-left:1px solid var(--bgLite);
+  border-bottom:1px solid var(--bgLite);
+  padding:1px 4px;
+  border-radius: 8px;
+}
+.get-source{
+  border-left: 1px solid var(--bgLite);
+  margin-left:2rem;
+}
+.get-source button{
+  background-color: var(--bgLite);
+}
+.syntext pre{
+  border-radius: 1rem;
+}
+.active-state .active-item{
+  background-color: var(--White)!important;
+  color:black!important;
+}
+.template-modal .popup{
+  width:30rem;
+  overflow-y: scroll;
+  height: 100vh;
 }
