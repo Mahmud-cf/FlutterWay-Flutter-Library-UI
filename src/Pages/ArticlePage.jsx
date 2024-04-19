@@ -82,7 +82,7 @@ function ArticlePage() {
               <h2 className="text-xl font-medium pb-2 ">
                 How To Use Free Flutter Template
               </h2>
-              <p className="text-lite">
+              <p className="text-lite text-sm sm:text-base">
                 Need a boost in your app design? Grab a free Flutter UI kit!
                 These handy Flutter UI libraries offer a variety of pre-designed
                 templates, making it easy for you to create stunning apps. The

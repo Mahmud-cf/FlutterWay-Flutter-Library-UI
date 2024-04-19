@@ -27,10 +27,12 @@ function Home() {
 
         <div className="p-1 sm:p-4 lg:ml-48">
             <Hero mode={mode} setMode={setMode} toggleMode={toggleMode}  />
-            <HeroText/>
-            <Templates tempalteSlice = {tempalteSlice} />
+            <div className="hidden md:block" >
+              <HeroText/>
+            </div>
+            <Templates mode={mode} tempalteSlice = {tempalteSlice} />
             <Article articleSlice={articleSlice} />
-            <Screens screensImgSlice ={screensImgSlice} />
+            <Screens mode={mode} screensImgSlice ={screensImgSlice} />
             <Fotter/>
         </div>
       </div>

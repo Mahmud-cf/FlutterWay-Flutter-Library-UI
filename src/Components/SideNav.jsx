@@ -6,19 +6,19 @@ function SideNav() {
   return (
     <aside
       id="default-sidebar"
-      className="sideNav fixed w-full lg:w-48 bottom-0  lg:top-0 lg:left-0 z-40  lg:h-screen transition-transform  sm:translate-x-0  border-r-2 border-solid border-slate-200 dark:border-slate-900"
+      className="sideNav lg:fixed w-full lg:w-48 lg:block hidden  lg:top-0 lg:left-0 z-40  lg:h-screen transition-transform  sm:translate-x-0  border-r-2 border-solid border-slate-200 dark:border-slate-900"
       aria-label="Sidebar"
     >
-      <div className="h-full flex lg:block overflow-y-auto sideNav-scroll bg-white dark:bg-black">
-        <div className="logo pt-4 hidden lg:block">
-          <a href="./"><img src={logo} alt="" className="w-36 mb-5" /></a>
+      <div className="h-full flex flex-col lg:block overflow-y-auto sideNav-scroll bg-white dark:bg-black">
+        <div className="logo hidden pt-4 lg:block">
+          <a href="./"><img src={logo} alt="" className="w-36 lg:mb-5 pl-3" /></a>
         </div>
 
-        <ul className="space-y-2 font-medium nav-item-ul flex lg:block lg:overflow-x-hidden overflow-x-scroll">
-          <li className="menu-item whitespace-nowrap lg:whitespace-normal">
+        <ul className="space-y-2 mt-3 lg:mt-0 font-medium nav-item-ul lg:block lg:overflow-x-hidden overflow-x-scroll">
+          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex flex-col lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,10 +37,10 @@ function SideNav() {
               <span className="ml-2">Discover</span>
             </a>
           </li>
-          <li className="menu-item whitespace-nowrap lg:whitespace-normal">
+          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex flex-col lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,10 +59,10 @@ function SideNav() {
               <span className="ml-2">UI kits</span>
             </a>
           </li>
-          <li className="menu-item whitespace-nowrap lg:whitespace-normal">
+          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex flex-col lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,10 +81,10 @@ function SideNav() {
               <span className="ml-2">Screens</span>
             </a>
           </li>
-          <li className="menu-item whitespace-nowrap lg:whitespace-normal">
+          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex flex-col lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,10 +103,10 @@ function SideNav() {
               <span className="ml-2">Articles</span>
             </a>
           </li>
-          <li className="menu-item whitespace-nowrap lg:whitespace-normal">
+          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex flex-col lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,10 +125,10 @@ function SideNav() {
               <span className="ml-2">Become Sponsor</span>
             </a>
           </li>
-          <li className="menu-item whitespace-nowrap lg:whitespace-normal">
+          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex flex-col lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ function SideNav() {
             </a>
           </li>
         </ul>
-        <ul className="space-y-2 All-Screens font-medium nav-item-ul mt-5 hidden lg:block">
+        <ul className="space-y-2 All-Screens font-medium nav-item-ul mt-5  lg:block">
           <h6 className="pl-5 dark:text-white ">All Screens</h6>
           {AllScreens.map((menuItem) => {
             return (

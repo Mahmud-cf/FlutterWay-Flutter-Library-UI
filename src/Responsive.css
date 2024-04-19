@@ -10,31 +10,34 @@
   *{
     max-width:100%;
   }
-    .sideNav{
-        border-top:2px solid var(--textLite)!important;
-    }
-    .sideNav div{
-        background-color: #020617!important;
+    .res-menu .sideNav{
+      display: block;
     }
     .nav-item-ul li:first-child{
-        background-color: var(--bgLiteDark)!important;
         font-size: 14px;
-        color: var(--White)!important;
+        color: #000;
       }
-      .nav-item-ul::-webkit-scrollbar{
-        height: 2px;
+      .template-modal .res-menu{
+        width:15rem;
       }
-      .nav-item-ul::-webkit-scrollbar-track{
-        background: #4566fd; 
+      .logo img{
+        margin-left:0;
       }
-      .nav-item-ul::-webkit-scrollbar-thumb {
-        
-        background: #d3ddf8;
+      .res-menu .res-button{
+        display: block;
+      }
+      .search-box{
+        position: absolute;
+        width:calc(100vw - 2rem)!important;
+        top:5rem;
+      }
+      .template-title{
+        padding-top:3rem;
+      }
+      .temp-det-intro{
+        padding-top:1.5rem;
       }
       
-      .nav-item-ul::-webkit-scrollbar-thumb:hover{
-        background: #012058; 
-      }
       .scrn-button-copy-img{
         font-size: 14px;
         width:2.5rem;
@@ -62,8 +65,19 @@
     .scrnImg:hover .scrn-button-copy-img, .scrnImg:hover .scrn-button-copy-button{
         display: none!important;
       }
+      .search-popup .template-title{
+        padding-top:0rem;
+      }
+      .get-source{
+        margin-left:0;
+        margin-top:10px;
+        border-left:none;
+      }
 } 
 @media screen and (max-width:500px){
+  body{
+    padding:5px;
+  }
     .hero-title .title-width{
         width:100%;
         padding-left:1rem;
@@ -75,5 +89,8 @@
     }
     .hero-title p{
         font-size: 13px;
+    }
+    .template-modal .popup{
+      width:20rem;
     }
 } 

@@ -3,7 +3,7 @@ import commentIcon from '../assets/comment.png';
 import downloadIcon from '../assets/download.png';
 import TemplateModal from './TemplateModal';
 
-function Templates({ tempalteSlice }) {
+function Templates({mode, tempalteSlice }) {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -27,10 +27,12 @@ function Templates({ tempalteSlice }) {
       </div>
       <div className="template-wrapper grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4">
         {tempalteSlice.map((tempItem) => (
-          <div key={tempItem.id} onClick={() => handleShowItem(tempItem)}>
-            <img className="cursor-pointer hover:scale-105 transition-all" src={tempItem.img} alt="" />
+          <div key={tempItem.id} onClick={() => handleShowItem(tempItem)} className='sm:aspect-video set-aspect-ratio' >
+            <div>
+            <img className="w-full cursor-pointer hover:scale-105 transition-all" src={tempItem.img} alt="" />
+            </div>
             <div className="flex justify-between py-2">
-              <h6 className="font-medium cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.title}</h6>
+              <h6 className="font-semibold cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.title}</h6>
               <div className="flex items-center">
                 <img className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3" src={commentIcon} alt="" />
                 <span className="hidden sm:inline-block xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.comment}</span>
@@ -44,7 +46,7 @@ function Templates({ tempalteSlice }) {
 
       {showPopup && (
         <div className="popup">
-          <TemplateModal handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
+          <TemplateModal mode={mode} handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
         </div>
       )}
       

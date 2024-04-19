@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'myFont'; /* Custom font name */
+    src: url('./Font/OTFs/JUST\ Sans\ Regular.otf'); /* Path to the font file */
+    /* Add additional src declarations for different font formats if necessary */
+  }
+
+  body{
+    font-family: 'myFont' , sans-serif;
+  }
 
 .dark{
     background-color: #000;

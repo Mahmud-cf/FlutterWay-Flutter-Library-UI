@@ -33,23 +33,33 @@ function ArticleDetails() {
         <div className="p-1 sm:p-4 lg:ml-48">
           <Hero mode={mode} setMode={setMode} toggleMode={toggleMode} />
           <div className="temp-det-wrapper">
-            <div className="temp-det-intro flex justify-between items-start">
-              <div className="max-w-2xl mr-5">
-                <div className="ceo-comment flex items-center my-5">
-                  <div>
-                    <img src={anwar} alt="" />
-                  </div>
-                  <div className=" ml-5" >
-                    <span className="text-black mr-3 font-semibold" >Abu Anwar</span>
-                    <span className="text-lite mr-3" >@abuanwar072</span>
-                    <div className="flex items-center" >
-                      <span className="text-lite mr-3">March 29, 2024</span>
-                      <div className="w-2 h-2 bg-slate-200 rounded-md"></div>
-                      <span className="text-lite ml-3">Flutter, Animation</span>
+            <div className="temp-det-intro  flex flex-col md:flex-row  justify-between items-start">
+              <div className="sm:max-w-2xl mr-5">
+                <div className="ceo-comment flex md:items-center flex-col md:flex-row items-start my-5">
+                  <div className="flex" >
+                    <div>
+                      <img src={anwar} alt="" />
+                    </div>
+                    <div className=" ml-5">
+                      <span className="text-black mr-3 font-semibold">
+                        Abu Anwar
+                      </span>
+                      <span className="text-lite mr-3">@abuanwar072</span>
+                      <div className="flex items-center">
+                        <span className="text-lite mr-3">March 29, 2024</span>
+                        <div className="w-2 h-2 bg-slate-200 rounded-md"></div>
+                        <span className="text-lite ml-3">
+                          Flutter, Animation
+                        </span>
+                      </div>
                     </div>
                   </div>
-                  <div className="get-source h-10 flex items-center" >
-                    <button className=" flex items-center rounded-3xl ml-8 py-2 px-5 " > <img src={code} alt="" className="mr-2" /> <span>Source Code</span></button>
+                  <div className="get-source h-10 flex items-center">
+                    <button className=" flex items-center rounded-3xl md:ml-8 py-2 px-5 ">
+                      {" "}
+                      <img src={code} alt="" className="mr-2" />{" "}
+                      <span>Source Code</span>
+                    </button>
                   </div>
                 </div>
                 <p className="text-sm text-lite mb-5">
@@ -67,9 +77,8 @@ function ArticleDetails() {
                 </p>
 
                 <div className="syntext">
-                    <SyntextCode/>
+                  <SyntextCode />
                 </div>
-
 
                 <h2 className="text-2xl my-3 font-normal dark:text-white">
                   Build you shop app in days
@@ -96,7 +105,7 @@ function ArticleDetails() {
                   of the button.
                 </p>
                 <div className="flex justify-end">
-                  <button className="w-20 sm:w-32 ml-4 bg-black rounded-xl text-white p-1 sm:p-1 font-semibold dark:bg-white dark:text-black ">
+                  <button className="w-32 ml-4 bg-black rounded-xl text-white p-1 sm:p-1 font-semibold dark:bg-white dark:text-black ">
                     Learn more
                   </button>
                 </div>

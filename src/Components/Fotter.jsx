@@ -36,9 +36,9 @@ function Fotter() {
       <div className="footer-right flex gap-10 dark:text-white mt-7 sm:mt-0">
         <div className="footer-right-menu">
             <p className="mb-3 font-semibold" >Explore</p>
-            <p className=" text-sm mb-2" >Blog</p>
-            <p className=" text-sm mb-2" >Templates</p>
-            <p className=" text-sm mb-2" >Screens</p>
+            <a href="#" className="text-sm mb-2 block" >Blog</a>
+            <a href="#" className="text-sm mb-2 block" >Template</a>
+            <a href="#" className="text-sm mb-2 block" >Screens</a>
         </div>
         <div className="footer-right-menu">
             <p className="mb-3 font-semibold" >Support</p>

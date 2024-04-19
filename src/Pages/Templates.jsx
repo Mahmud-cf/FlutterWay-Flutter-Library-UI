@@ -8,6 +8,7 @@ import downloadIcon from "../assets/download.png";
 import right from "../assets/right.png";
 import filter from "../assets/filter.png";
 import TemplateModal from "../Components/TemplateModal";
+import SlideNav from "../Components/SlideNav";
 
 function TemplatePage() {
   const [mode, setMode] = useState("light");
@@ -36,8 +37,8 @@ function TemplatePage() {
 
         <div className="p-1 sm:p-4 lg:ml-48">
           <Hero mode={mode} setMode={setMode} toggleMode={toggleMode} />
-          <div className="my-6">
-            <div className="template-title flex justify-between items-center mb-5">
+          <div className="my-3">
+            <div className="template-title flex justify-between items-center mb-3 mt-12">
               <h2 className="text-2xl font-normal dark:text-white">
                 Templates
               </h2>
@@ -49,26 +50,16 @@ function TemplatePage() {
             </div>
             <div className="screens-menu flex items-center">
               <div className="filter-button">
-                <div className="flex justify-center items-center rounded-3xl bg-lite px-3 py-1">
+                <div className="flex justify-center items-center rounded-3xl bg-lite px-4 py-1">
                   <img src={filter} alt="" />
-                  <span>Filter</span>
+                  <span className="ml-2">Filter</span>
                 </div>
               </div>
-              <div className="flex screens-menu-item pb-2 overflow-x-auto gap-1 items-center">
-                {ScreensMenu.map((screenMenuItem) => (
-                  <span
-                    className="py-1 px-3 rounded-3xl whitespace-nowrap dark:text-white dark:hover:text-black "
-                    key={screenMenuItem.id}
-                  >
-                    {screenMenuItem.title}
-                  </span>
-                ))}
-                <img src={right} alt="" />
-              </div>
+              <SlideNav />
             </div>
-            <div className="template-wrapper mt-7 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 ">
+            <div className="template-wrapper mt-3 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 ">
               {template.map((tempItem) => (
-                <div key={tempItem.id}  onClick={() => handleShowItem(tempItem)}>
+                <div key={tempItem.id} onClick={() => handleShowItem(tempItem)}>
                   <img className="cursor-pointer" src={tempItem.img} alt="" />
                   <div className="flex justify-between py-2">
                     <h6 className="font-medium cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">
@@ -103,7 +94,7 @@ function TemplatePage() {
               <h2 className="text-xl font-medium pb-2 ">
                 How To Use Free Flutter Template
               </h2>
-              <p className="text-lite">
+              <p className="text-lite text-sm md:text-base">
                 Need a boost in your app design? Grab a free Flutter UI kit!
                 These handy Flutter UI libraries offer a variety of pre-designed
                 templates, making it easy for you to create stunning apps. The
@@ -113,10 +104,13 @@ function TemplatePage() {
             </div>
           </div>
           {showPopup && (
-        <div className="popup">
-          <TemplateModal handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
-        </div>
-      )}
+            <div className="popup">
+              <TemplateModal
+                handleClosePopup={handleClosePopup}
+                selectedItem={selectedItem}
+              />
+            </div>
+          )}
           <Fotter />
         </div>
       </div>

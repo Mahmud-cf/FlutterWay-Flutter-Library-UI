@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import cross from "../assets/cross.png";
 import whiteCross from "../assets/white-cross.png";
 import logo from "../assets/Logo.png";
 
 function PriceingPopup({mode, rightIcon, whiteRight, closePopup }) {
+
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    // Function to handle clicks outside the popup
+    function handleClickOutside(event) {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        closePopup();
+      }
+    }
+
+    // Add event listener to the document body
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Remove event listener when the component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [closePopup]);
+
   return (
     <div className="the-pop-up fixed inset-0 z-50 flex items-center justify-center">
-      <div className="bg-white p-4 dark:bg-black rounded-2xl shadow-lg popup priceing relative">
+      <div ref={popupRef} className="bg-white p-4 dark:bg-black rounded-2xl shadow-lg popup priceing relative">
         <div
           className=" absolute right-5 top-5 cursor-pointer"
           onClick={closePopup}
         >
-          <img src={mode ? whiteCross : cross} alt="" />
+          <img src={mode === 'dark' ? whiteCross : cross} alt="" />
         </div>
         <div className="log-in-welcome text-center">
           <img className="my-o mx-auto" src={logo} alt="" />
@@ -27,31 +47,31 @@ function PriceingPopup({mode, rightIcon, whiteRight, closePopup }) {
             </h1>
             <ul className="dark:text-white">
               <li className="flex items-center">
-                <img src={mode ? whiteRight : rightIcon} alt="" />{" "}
+                <img src={mode === 'dark' ? whiteRight : rightIcon} alt="" />{" "}
                 <span className="ml-2 mb-1">Full access</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? whiteRight : rightIcon} alt="" />{" "}
+                <img src={mode === 'dark' ? whiteRight : rightIcon} alt="" />{" "}
                 <span className="ml-2 mb-1">Unlimited downloads</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? whiteRight : rightIcon} alt="" />{" "}
+                <img src={mode === 'dark' ? whiteRight : rightIcon} alt="" />{" "}
                 <span className="ml-2 mb-1">Unlimited copy code</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? whiteRight : rightIcon} alt="" />{" "}
+                <img src={mode === 'dark' ? whiteRight : rightIcon} alt="" />{" "}
                 <span className="ml-2 mb-1">Premium articles</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? whiteRight : rightIcon} alt="" />{" "}
+                <img src={mode=== 'dark' ? whiteRight : rightIcon} alt="" />{" "}
                 <span className="ml-2 mb-1">Premium videos</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? whiteRight : rightIcon} alt="" />{" "}
+                <img src={mode === 'dark' ? whiteRight : rightIcon} alt="" />{" "}
                 <span className="ml-2 mb-1">Early access of code</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? whiteRight : rightIcon} alt="" />{" "}
+                <img src={mode === 'dark' ? whiteRight : rightIcon} alt="" />{" "}
                 <span className="ml-2 mb-1">Billed monthly</span>{" "}
               </li>
             </ul>
@@ -74,31 +94,31 @@ function PriceingPopup({mode, rightIcon, whiteRight, closePopup }) {
             </h1>
             <ul className="dark:text-black">
               <li className="flex items-center">
-                <img src={mode ? rightIcon: whiteRight } alt="" />{" "}
+                <img src={mode === 'dark' ? rightIcon: whiteRight } alt="" />{" "}
                 <span className="ml-2 mb-1 ">Full access</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? rightIcon: whiteRight } alt="" />{" "}
+                <img src={mode === 'dark' ? rightIcon: whiteRight } alt="" />{" "}
                 <span className="ml-2 mb-1">Unlimited downloads</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? rightIcon: whiteRight } alt="" />{" "}
+                <img src={mode === 'dark' ? rightIcon: whiteRight } alt="" />{" "}
                 <span className="ml-2 mb-1">Unlimited copy code</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? rightIcon: whiteRight } alt="" />{" "}
+                <img src={mode === 'dark' ? rightIcon: whiteRight } alt="" />{" "}
                 <span className="ml-2 mb-1">Premium articles</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? rightIcon: whiteRight } alt="" />{" "}
+                <img src={mode === 'dark' ? rightIcon: whiteRight } alt="" />{" "}
                 <span className="ml-2 mb-1">Premium videos</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? rightIcon: whiteRight } alt="" />{" "}
+                <img src={mode === 'dark' ? rightIcon: whiteRight } alt="" />{" "}
                 <span className="ml-2 mb-1">Early access of code</span>{" "}
               </li>
               <li className="flex items-center">
-                <img src={mode ? rightIcon: whiteRight} alt="" />{" "}
+                <img src={mode === 'dark' ? rightIcon: whiteRight} alt="" />{" "}
                 <span className="ml-2 mb-1">Billed monthly</span>{" "}
               </li>
             </ul>

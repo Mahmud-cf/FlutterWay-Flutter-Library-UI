@@ -1,81 +1,35 @@
 import React, { useEffect, useState } from "react";
 import searchIcon from "../assets/search.png";
-import logo from "../assets/Logo.png";
-import cross from "../assets/cross.png";
-import rightIcon from "../assets/rightIcon.png";
-import whiteRight from "../assets/whiteRight.png";
-import LoginPopup from "./LoginPopup";
-import CreateAccountpopup from "./CreateAccountpopup";
-import ForgetPasswordPopup from "./ForgetPasswordPopup";
-import NewPasswordPopup from "./NewPasswordPopup";
-import PriceingPopup from "./PriceingPopup";
+import logo from "../assets/favLogo.png";
+import LogInButtonComponent from "./LogInButtonComponent";
+import ResMenu from "./ResMenu";
 import SearchPopup from "./SearchPopup";
 
 function Hero({ mode, setMode, toggleMode }) {
   const [modeItem, setModeItem] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [forgetPassword, setForgetPassword] = useState(false);
-  const [newPassword, setNewPassword] = useState(false);
-  const [createAccount, setCreateAccount] = useState(false);
-  const [priceing, setPriceing] = useState(false);
   const [search, setSearch] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  const handleMenu = ()=> {
+    setMenu(!menu)
+  }
 
   function showModeItem() {
     setModeItem(!modeItem);
   }
 
-  const togglePopup = () => {
-    setIsOpen(true);
-    setForgetPassword(false);
-    setNewPassword(false);
-    setCreateAccount(false);
-  };
-
-  const toggleForgetPassword = () => {
-    setForgetPassword(true);
-    setIsOpen(false);
-    setNewPassword(false);
-    setCreateAccount(false);
-  };
-
-  const toggleSetNewPassword = () => {
-    setNewPassword(true);
-    setIsOpen(false);
-    setForgetPassword(false);
-    setCreateAccount(false);
-  };
-
-  const toggleCreateAccount = () => {
-    setCreateAccount(true);
-    setNewPassword(false);
-    setIsOpen(false);
-    setForgetPassword(false);
-  };
-
-  const togglePriceing = () => {
-    setPriceing(true);
-  };
-
   const toggleSearch = () => {
     setSearch(!search);
   };
 
-  const closePopup = () => {
-    setIsOpen(false);
-    setForgetPassword(false);
-    setNewPassword(false);
-    setCreateAccount(false);
-    setPriceing(false);
-    setSearch(false)
-  };
-
   return (
     <div>
-      <div className="header-nav-wrapper flex justify-between items-center">
+      <div className="header-nav-wrapper mb-16 lg:mb-0 flex justify-between items-center">
         <div className="search-button">
+          <div className="lg:hidden" ><a href="/"><img className="w-12" src={logo} alt="" /></a></div>
           <button
             type="button"
-            className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-lite ring-0 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 shadow-sm rounded-3xl text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700"
+            className="search-box flex items-center w-72 text-left space-x-3 px-4 h-12 bg-lite ring-0 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 shadow-sm rounded-3xl text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700"
             onClick={toggleSearch}
           >
             {mode ? (
@@ -99,40 +53,25 @@ function Hero({ mode, setMode, toggleMode }) {
             <span className="flex-auto">Search...</span>
           </button>
 
-            {search && (
-              <SearchPopup mode={mode} closePopup={closePopup} />
-            )}
+          {search && <SearchPopup mode={mode} closePopup={toggleSearch} />}
 
-          <div>
-            <img className="sm:hidden w-32" src={logo} alt="" />
-          </div>
         </div>
         <div className="header-nav-right-part flex items-center relative">
-          <div className="cursor-pointer" onClick={showModeItem}>
-            {mode === "dark" ? (
-              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
-                  className="fill-sky-400/20"
-                ></path>
-                <path
-                  d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
-                  className="fill-white"
-                ></path>
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
-                  className="fill-white"
-                ></path>
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C12.4142 2.5 12.75 2.83579 12.75 3.25V5.68421C12.75 6.09842 12.4142 6.43421 12 6.43421C11.5858 6.43421 11.25 6.09842 11.25 5.68421V3.25C11.25 2.83579 11.5858 2.5 12 2.5ZM4.92868 5.42892C5.22157 5.13602 5.69645 5.13602 5.98934 5.42892L7.35704 6.79662C7.64993 7.08951 7.64993 7.56438 7.35704 7.85728C7.06415 8.15017 6.58927 8.15017 6.29638 7.85728L4.92868 6.48958C4.63579 6.19668 4.63579 5.72181 4.92868 5.42892ZM19.0704 5.42892C19.3633 5.72181 19.3633 6.19668 19.0704 6.48958L17.7027 7.85728C17.4098 8.15017 16.9349 8.15017 16.642 7.85728C16.3491 7.56438 16.3491 7.08951 16.642 6.79662L18.0097 5.42892C18.3026 5.13602 18.7775 5.13602 19.0704 5.42892ZM7.35526 12.5C7.35526 9.93478 9.43478 7.85526 12 7.85526C14.5652 7.85526 16.6447 9.93478 16.6447 12.5C16.6447 15.0652 14.5652 17.1447 12 17.1447C9.43478 17.1447 7.35526 15.0652 7.35526 12.5ZM12 9.35526C10.2632 9.35526 8.85526 10.7632 8.85526 12.5C8.85526 14.2368 10.2632 15.6447 12 15.6447C13.7368 15.6447 15.1447 14.2368 15.1447 12.5C15.1447 10.7632 13.7368 9.35526 12 9.35526ZM2 12.5C2 12.0858 2.33579 11.75 2.75 11.75H5.18421C5.59842 11.75 5.93421 12.0858 5.93421 12.5C5.93421 12.9142 5.59842 13.25 5.18421 13.25H2.75C2.33579 13.25 2 12.9142 2 12.5ZM18.0658 12.5C18.0658 12.0858 18.4016 11.75 18.8158 11.75H21.25C21.6642 11.75 22 12.0858 22 12.5C22 12.9142 21.6642 13.25 21.25 13.25H18.8158C18.4016 13.25 18.0658 12.9142 18.0658 12.5ZM16.6576 17.1571C16.9505 16.8642 17.4254 16.8642 17.7183 17.1571L19.0713 18.5102C19.3642 18.803 19.3642 19.2779 19.0713 19.5708C18.7784 19.8637 18.3035 19.8637 18.0106 19.5708L16.6576 18.2178C16.3647 17.9249 16.3647 17.45 16.6576 17.1571ZM7.34242 17.1574C7.63531 17.4503 7.63531 17.9251 7.34242 18.218L5.98939 19.571C5.6965 19.8639 5.22163 19.8639 4.92873 19.571C4.63584 19.2782 4.63584 18.8033 4.92873 18.5104L6.28176 17.1574C6.57465 16.8645 7.04953 16.8645 7.34242 17.1574ZM12 18.5658C12.4142 18.5658 12.75 18.9016 12.75 19.3158V21.75C12.75 22.1642 12.4142 22.5 12 22.5C11.5858 22.5 11.25 22.1642 11.25 21.75V19.3158C11.25 18.9016 11.5858 18.5658 12 18.5658Z" fill="#111111"/>
-</svg>
-            )}
+          <div className="cursor-pointer mr-3" onClick={showModeItem}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12 2.5C12.4142 2.5 12.75 2.83579 12.75 3.25V5.68421C12.75 6.09842 12.4142 6.43421 12 6.43421C11.5858 6.43421 11.25 6.09842 11.25 5.68421V3.25C11.25 2.83579 11.5858 2.5 12 2.5ZM4.92868 5.42892C5.22157 5.13602 5.69645 5.13602 5.98934 5.42892L7.35704 6.79662C7.64993 7.08951 7.64993 7.56438 7.35704 7.85728C7.06415 8.15017 6.58927 8.15017 6.29638 7.85728L4.92868 6.48958C4.63579 6.19668 4.63579 5.72181 4.92868 5.42892ZM19.0704 5.42892C19.3633 5.72181 19.3633 6.19668 19.0704 6.48958L17.7027 7.85728C17.4098 8.15017 16.9349 8.15017 16.642 7.85728C16.3491 7.56438 16.3491 7.08951 16.642 6.79662L18.0097 5.42892C18.3026 5.13602 18.7775 5.13602 19.0704 5.42892ZM7.35526 12.5C7.35526 9.93478 9.43478 7.85526 12 7.85526C14.5652 7.85526 16.6447 9.93478 16.6447 12.5C16.6447 15.0652 14.5652 17.1447 12 17.1447C9.43478 17.1447 7.35526 15.0652 7.35526 12.5ZM12 9.35526C10.2632 9.35526 8.85526 10.7632 8.85526 12.5C8.85526 14.2368 10.2632 15.6447 12 15.6447C13.7368 15.6447 15.1447 14.2368 15.1447 12.5C15.1447 10.7632 13.7368 9.35526 12 9.35526ZM2 12.5C2 12.0858 2.33579 11.75 2.75 11.75H5.18421C5.59842 11.75 5.93421 12.0858 5.93421 12.5C5.93421 12.9142 5.59842 13.25 5.18421 13.25H2.75C2.33579 13.25 2 12.9142 2 12.5ZM18.0658 12.5C18.0658 12.0858 18.4016 11.75 18.8158 11.75H21.25C21.6642 11.75 22 12.0858 22 12.5C22 12.9142 21.6642 13.25 21.25 13.25H18.8158C18.4016 13.25 18.0658 12.9142 18.0658 12.5ZM16.6576 17.1571C16.9505 16.8642 17.4254 16.8642 17.7183 17.1571L19.0713 18.5102C19.3642 18.803 19.3642 19.2779 19.0713 19.5708C18.7784 19.8637 18.3035 19.8637 18.0106 19.5708L16.6576 18.2178C16.3647 17.9249 16.3647 17.45 16.6576 17.1571ZM7.34242 17.1574C7.63531 17.4503 7.63531 17.9251 7.34242 18.218L5.98939 19.571C5.6965 19.8639 5.22163 19.8639 4.92873 19.571C4.63584 19.2782 4.63584 18.8033 4.92873 18.5104L6.28176 17.1574C6.57465 16.8645 7.04953 16.8645 7.34242 17.1574ZM12 18.5658C12.4142 18.5658 12.75 18.9016 12.75 19.3158V21.75C12.75 22.1642 12.4142 22.5 12 22.5C11.5858 22.5 11.25 22.1642 11.25 21.75V19.3158C11.25 18.9016 11.5858 18.5658 12 18.5658Z"
+                fill={mode === "dark" ? "#fff" : "#000"}
+              />
+            </svg>
           </div>
 
           {modeItem ? (
@@ -207,36 +146,29 @@ function Hero({ mode, setMode, toggleMode }) {
             ""
           )}
 
-          <button
-            className="w-20 sm:w-24 ml-4 bg-white rounded-xl text-black p-2 sm:p-3 font-semibold button-border dark:bg-black "
-            onClick={togglePopup}
-          >
-            Log in
+          <LogInButtonComponent mode={mode} />
+          <button className="mx-3 block lg:hidden" onClick={handleMenu} >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+            >
+              <path
+                d="M0.5 16C0.5 7.43959 7.43959 0.5 16 0.5H32C40.5604 0.5 47.5 7.43959 47.5 16V32C47.5 40.5604 40.5604 47.5 32 47.5H16C7.43959 47.5 0.5 40.5604 0.5 32V16Z"
+                stroke="#F0F0F0"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M14 18C14 17.5858 14.3358 17.25 14.75 17.25H33.25C33.6642 17.25 34 17.5858 34 18C34 18.4142 33.6642 18.75 33.25 18.75H14.75C14.3358 18.75 14 18.4142 14 18ZM14 24C14 23.5858 14.3358 23.25 14.75 23.25H33.25C33.6642 23.25 34 23.5858 34 24C34 24.4142 33.6642 24.75 33.25 24.75H14.75C14.3358 24.75 14 24.4142 14 24ZM14 30C14 29.5858 14.3358 29.25 14.75 29.25H33.25C33.6642 29.25 34 29.5858 34 30C34 30.4142 33.6642 30.75 33.25 30.75H14.75C14.3358 30.75 14 30.4142 14 30Z"
+                fill={mode === 'dark' ? '#fff' : '#000'}
+              />
+            </svg>
           </button>
-          {isOpen && (
-            <LoginPopup mode={mode} closePopup={closePopup} toggleForgetPassword={toggleForgetPassword} toggleCreateAccount={toggleCreateAccount} />
-          )}
-
-          {createAccount && (
-            <CreateAccountpopup mode={mode} closePopup={closePopup} togglePopup={togglePopup} />
-          )}
-
-          {forgetPassword && (
-            <ForgetPasswordPopup mode={mode} closePopup={closePopup} toggleSetNewPassword={toggleSetNewPassword} togglePopup={togglePopup} />
-          )}
-
-          {newPassword && (
-            <NewPasswordPopup mode={mode} closePopup={closePopup}  />
-          )}
-
-          <button
-            className="w-20 sm:w-24 ml-4 bg-black rounded-xl text-white p-2 sm:p-3 font-semibold dark:bg-white dark:text-black "
-            onClick={togglePriceing}
-          >
-            Get Pro
-          </button>
-          {priceing && (
-            <PriceingPopup mode={mode} rightIcon={rightIcon} whiteRight={whiteRight} closePopup={closePopup} />
+          {menu && (
+            <ResMenu handleClosePopup={handleMenu} />
           )}
         </div>
       </div>

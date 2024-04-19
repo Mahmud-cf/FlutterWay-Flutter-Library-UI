@@ -26,14 +26,14 @@ function Article({articleSlice}) {
       </div>
       <div className="template-wrapper grid grid-cols-2 md:grid-cols-3 gap-4 ">
         {articleSlice.map((tempItem) => (
-          <div key={tempItem.id}  onClick={() => handleShowItem(tempItem)} >
+          <div key={tempItem.id}  onClick={() => handleShowItem(tempItem)} className="sm:aspect-video" >
             <img className="cursor-pointer hover:scale-105 transition-all" src={tempItem.img} alt="" />
             <div className="py-2">
                 <div className="text-lite text-xs mb-1" >
                     <span>Mar 24, 2024</span>
                     <span className="ml-4" >Animation</span>
                 </div>
-              <h6 className="font-medium cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">
+              <h6 className="font-semibold cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">
                 {tempItem.title}
               </h6>
             </div>
@@ -42,7 +42,7 @@ function Article({articleSlice}) {
       </div>
       {showPopup && (
         <div className="popup">
-          <TemplateModal handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
+          <TemplateModal  handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
         </div>
       )}
     </div>
