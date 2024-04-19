@@ -28,8 +28,10 @@
       }
       .search-box{
         position: absolute;
-        width:calc(100vw - 2rem)!important;
+        width:calc(100vw - 3rem)!important;
         top:5rem;
+        margin-left:1rem;
+        left:5px;
       }
       .template-title{
         padding-top:3rem;
@@ -92,5 +94,9 @@
     }
     .template-modal .popup{
       width:20rem;
+    }
+    .search-box{
+      width:calc(100vw - 2rem)!important;
+      left:-2px;
     }
 } 
