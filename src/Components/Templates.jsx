@@ -20,8 +20,8 @@ function Templates({mode, tempalteSlice }) {
   return (
     <div>
       <div className="template-title flex justify-between items-center mb-5">
-        <h2 className="text-2xl font-normal dark:text-white">Templates</h2>
-        <a href="/template"><p className="text-lite text-sm cursor-pointer dark:hover:text-white hover:underline hover:text-black" onClick={handleClosePopup}>
+        <h2 className="text-xl sm:text-2xl font-normal dark:text-white">Templates</h2>
+        <a href="/template"><p className="text-lite text-xs sm:text-sm cursor-pointer dark:hover:text-white hover:underline hover:text-black" onClick={handleClosePopup}>
           See all
         </p></a>
       </div>
@@ -35,9 +35,9 @@ function Templates({mode, tempalteSlice }) {
               <h6 className="font-semibold cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.title}</h6>
               <div className="flex items-center">
                 <img className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3" src={commentIcon} alt="" />
-                <span className="hidden sm:inline-block xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.comment}</span>
+                <span className="hidden sm:inline-block xl:text-sm lg:text-sm text-xs dark:text-white">{tempItem.comment}</span>
                 <img className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3" src={downloadIcon} alt="" />
-                <span className="hidden sm:inline-block xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.download}</span>
+                <span className="hidden sm:inline-block xl:text-sm lg:text-sm text-xs dark:text-white">{tempItem.download}</span>
               </div>
             </div>
           </div>

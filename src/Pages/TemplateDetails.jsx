@@ -28,15 +28,17 @@ function TemplateDetails() {
           <Hero mode={mode} setMode={setMode} toggleMode={toggleMode} />
           <div className="temp-det-wrapper">
             <div className="temp-det-intro flex flex-col md:flex-row items-start justify-between md:items-end">
-              <div className="max-w-lg mt-10">
+              <div className="max-w-xl mt-10">
                 <a href="/template" className="flex">
-                  <img src={left} alt="" />{" "}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5987 4.5296C12.8586 4.75687 12.8849 5.15172 12.6577 5.41152L8.64374 10L12.6577 14.5885C12.8849 14.8483 12.8586 15.2431 12.5987 15.4705C12.339 15.6977 11.9441 15.6713 11.7168 15.4115L7.34294 10.4115C7.13683 10.176 7.13683 9.82412 7.34294 9.58853L11.7168 4.5885C11.9441 4.3287 12.339 4.30233 12.5987 4.5296Z" fill={mode === 'dark' ? '#fff' : '#000'} />
+                </svg>
                   <span className="text-sm text-lite">Template</span>{" "}
                 </a>
                 <h2 className="text-2xl my-3 font-normal dark:text-white">
                   Chat App Template
                 </h2>
-                <p className="text-sm text-lite">
+                <p className="text-base text-lite">
                   Need a boost in your app design? Grab a free Flutter UI kit!
                   These handy Flutter UI libraries offer a variety of
                   pre-designed templates, making it easy for you to create
@@ -44,14 +46,14 @@ function TemplateDetails() {
                 </p>
               </div>
               <div className="flex items-center mt-5 md:mt-0">
-                <button className="w-36 ml-0 md:ml-4 bg-white rounded-xl text-black p-2 font-semibold button-border dark:bg-black">
+                <button className="w-36 button-h ml-0 md:ml-4 bg-white rounded-xl text-black p-2 font-semibold button-border dark:bg-black">
                   <div className="flex items-center">
                     <img src={eye} alt="" />
-                    <span>Preview</span>
+                    <span className="ml-2" >Preview</span>
                   </div>
                 </button>
 
-                <button className="w-28 bg-black rounded-xl text-white p-2 ml-4 font-semibold dark:bg-white dark:text-black ">
+                <button className="w-28 button-h bg-black rounded-xl text-white p-2 ml-4 font-semibold dark:bg-white dark:text-black ">
                   Get Code
                 </button>
               </div>
@@ -64,14 +66,14 @@ function TemplateDetails() {
                 <h2 className="text-2xl my-3 font-normal dark:text-white">
                   Overview
                 </h2>
-                <p className="text-sm text-lite">
+                <p className="text-base text-lite">
                   Need a boost in your app design? Grab a free Flutter UI kit!
                   These handy Flutter UI libraries offer a variety of
                   pre-designed templates, making it easy for you to create
                   stunning apps. The best part you can download beautiful.
                 </p>
                 <img src={shop1} alt="" />
-                <p className="text-sm text-lite">
+                <p className="text-base text-lite">
                   Need a boost in your app design? Grab a free Flutter UI kit!
                   These handy Flutter UI libraries offer a variety of
                   pre-designed templates, making it easy for you to create
@@ -80,7 +82,7 @@ function TemplateDetails() {
                 <h2 className="text-2xl my-3 font-normal dark:text-white">
                   Build you shop app in days
                 </h2>
-                <p className="text-sm text-lite">
+                <p className="text-base text-lite">
                   Need a boost in your app design? Grab a free Flutter UI kit!
                   These handy Flutter UI libraries offer a variety of
                   pre-designed templates, making it easy for you to create
@@ -96,7 +98,7 @@ function TemplateDetails() {
                   <img src={revenu} alt="" />
                   <span className="m-0 absolute right-0 top-0">Sponsored</span>
                 </div>
-                <p>
+                <p className="text-sm" >
                   Libriwi is a plugin for Figma that lets you easily created and
                   share Figma groups, layouts and components with a single click
                   of the button.

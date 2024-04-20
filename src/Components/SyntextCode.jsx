@@ -18,7 +18,6 @@ class MyApp extends stateFulWidget{
 
   return (
     <div>
-      <h1>Code Example</h1>
       <SyntextHighliter language="javascript">
         {code}
       </SyntextHighliter>

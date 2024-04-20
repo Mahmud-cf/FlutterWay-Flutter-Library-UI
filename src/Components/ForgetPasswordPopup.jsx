@@ -38,11 +38,13 @@ function ForgetPasswordPopup({
           className=" absolute right-5 top-5 cursor-pointer"
           onClick={closePopup}
         >
+          <div className="logo">
           {mode === "dark" ? (
             <img src={whiteCross} alt="" />
           ) : (
             <img src={cross} alt="" />
           )}
+          </div>
         </div>
         <div className="log-in-welcome text-center">
           <img className="my-o mx-auto" src={logo} alt="" />
@@ -56,13 +58,13 @@ function ForgetPasswordPopup({
               type="email"
               id="email"
               placeholder="Enter Your Email"
-              className="px-4 py-2 border dark:bg-gray-600 rounded-md border-none bg-lite w-full"
+              className="px-4 py-2 input-h text-sm border  dark:bg-neutral-800 dark:text-neutral-500  rounded-md border-none bg-lite w-full"
             />
           </div>
           <a href="#">
             <div
               type="submit"
-              className="bg-black dark:bg-white dark:text-black text-center full-size hover:bg-slate-900 rounded-xl  text-white font-bold py-2 my-3 px-4"
+              className="bg-black button-h dark:bg-white dark:text-black text-center full-size hover:bg-slate-900 rounded-xl  text-white font-bold py-2 my-3 px-4"
               onClick={toggleSetNewPassword}
             >
               Sand Code

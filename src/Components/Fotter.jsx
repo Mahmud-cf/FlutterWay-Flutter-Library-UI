@@ -42,9 +42,9 @@ function Fotter() {
         </div>
         <div className="footer-right-menu">
             <p className="mb-3 font-semibold" >Support</p>
-            <p className=" text-sm mb-2" >Pricing</p>
-            <p className=" text-sm mb-2" >Become a sponsor</p>
-            <p className=" text-sm mb-2" >Hire top Flutter Devs</p>
+            <a href="#" className="text-sm mb-2 block">Pricing</a>
+            <a href="#" className="text-sm mb-2 block">Become asponsor</a>
+            <a href="#" className="text-sm mb-2 block">Hire toop Flutter Devs</a>
         </div>
       </div>
       </div>

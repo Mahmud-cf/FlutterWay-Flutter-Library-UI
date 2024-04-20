@@ -29,7 +29,7 @@ function Hero({ mode, setMode, toggleMode }) {
           <div className="lg:hidden" ><a href="/"><img className="w-12" src={logo} alt="" /></a></div>
           <button
             type="button"
-            className="search-box flex items-center w-72 text-left space-x-3 px-4 h-12 bg-lite ring-0 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 shadow-sm rounded-3xl text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700"
+            className="search-box flex items-center  dark:bg-neutral-800 dark:text-neutral-500  w-72 text-left space-x-3 px-4 h-12 bg-lite ring-0 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 shadow-sm rounded-3xl text-slate-400 dark:ring-0 dark:highlight-white/5 dark:hover:bg-slate-700"
             onClick={toggleSearch}
           >
             {mode ? (

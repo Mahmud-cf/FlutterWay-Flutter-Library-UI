@@ -19,8 +19,8 @@ function Article({articleSlice}) {
   return (
     <div className="mt-7" >
       <div className="template-title flex justify-between items-center mb-5">
-        <h2 className="text-2xl font-normal dark:text-white">Articles</h2>
-        <a href="./article"><p className="text-lite text-sm cursor-pointer dark:hover:text-white  hover:underline hover:text-black ">
+        <h2 className="text-xl sm:text-2xl font-normal dark:text-white">Articles</h2>
+        <a href="./article"><p className="text-lite text-xs sm:text-sm cursor-pointer dark:hover:text-white  hover:underline hover:text-black ">
           See all
         </p></a>
       </div>

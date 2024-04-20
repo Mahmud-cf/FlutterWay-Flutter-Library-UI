@@ -27,8 +27,8 @@ function Screens({mode, screensImgSlice}) {
   return (
     <div className="mt-7">
       <div className="template-title flex justify-between items-center mb-5">
-        <h2 className="text-2xl font-normal dark:text-white">Screens</h2>
-        <p className="text-lite text-sm cursor-pointer dark:hover:text-white  hover:underline hover:text-black ">
+        <h2 className="text-xl sm:text-2xl font-normal dark:text-white">Screens</h2>
+        <p className="text-lite text-xs sm:text-sm cursor-pointer dark:hover:text-white  hover:underline hover:text-black ">
           <a href="./screens">See all</a>
         </p>
       </div>
@@ -36,7 +36,7 @@ function Screens({mode, screensImgSlice}) {
         <div className="filter-button">
           <div className="flex justify-center items-center rounded-3xl bg-lite" style={{padding:'6px 22px'}} >
             <img src={filter} alt="" />
-            <span className="ml-2" >Filter</span>
+            <span className="ml-2 text-sm" >Filter</span>
           </div>
         </div>
         <SlideNav mode={mode} />
@@ -51,11 +51,11 @@ function Screens({mode, screensImgSlice}) {
               alt=""
             />
             <div className="absolute z-20 hidden scrn-button justify-between items-center">
-              <div className="items-center flex mr-3 cursor-pointer bg-white rounded-md py-1 px-3 scrn-button-copy-img">
+              <div className="items-center copy-btn-h flex mr-3 cursor-pointer bg-white rounded-md py-1 px-3 scrn-button-copy-img">
                 <img src={copy} alt="" />
                 <span className="ml-2" >20</span>
               </div>
-              <div className="cursor-pointer w-28 items-center bg-white rounded-md py-1 px-3 scrn-button-copy-button" >Copy code</div>
+              <div className="cursor-pointer copy-btn-h w-28 items-center bg-white rounded-md py-1 px-3 scrn-button-copy-button" >Copy code</div>
             </div>
           </div>
         ))}

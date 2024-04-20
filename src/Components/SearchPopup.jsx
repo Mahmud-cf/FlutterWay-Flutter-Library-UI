@@ -33,7 +33,7 @@ function SearchPopup({ mode, closePopup }) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [closePopup]);
-  
+
 
   const handleNavItemClick = (index) => {
     setActiveNavItem(index);
@@ -56,30 +56,28 @@ function SearchPopup({ mode, closePopup }) {
           />
 
           <div className="flex" >
-          <div className="filter-button">
-            <div className="flex justify-center items-center rounded-3xl bg-lite px-3 py-1"style={{padding:'5px 16px'}}>
-              <img src={filter} alt="" />
-              <span>Filter</span>
+            <div className="filter-button">
+              <div className="flex justify-center items-center rounded-3xl bg-lite px-3 py-1" style={{ padding: '5px 16px' }}>
+                <img src={filter} alt="" />
+                <span className='text-sm' >Filter</span>
+              </div>
             </div>
-          </div>
 
-          <div
-            className={`flex ${
-              mode === "dark" ? "active-state" : ""
-            } pb-2 overflow-x-auto gap-1 items-center search-nav-item`}
-          >
-            {searchNavItem.map((screenMenuItem, index) => (
-              <span
-                className={`py-1 search-menu-item dark:bg-black px-3 cursor-pointer rounded-3xl whitespace-nowrap dark:text-white dark:hover:text-black ${
-                  activeNavItem === index ? "active-item" : ""
-                }`}
-                key={index}
-                onClick={() => handleNavItemClick(index)}
-              >
-                {screenMenuItem}
-              </span>
-            ))}
-          </div>
+            <div
+              className={`flex ${mode === "dark" ? "active-state" : ""
+                } pb-2 overflow-x-auto gap-1 items-center search-nav-item`}
+            >
+              {searchNavItem.map((screenMenuItem, index) => (
+                <span
+                  className={`py-1 search-menu-item text-sm dark:bg-black px-3 cursor-pointer rounded-3xl whitespace-nowrap dark:text-white dark:hover:text-black ${activeNavItem === index ? "active-item" : ""
+                    }`}
+                  key={index}
+                  onClick={() => handleNavItemClick(index)}
+                >
+                  {screenMenuItem}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
         <div
@@ -95,14 +93,28 @@ function SearchPopup({ mode, closePopup }) {
         <div className="mt-8">
           {activeNavItem === 0 && (
             <div>
-              <Templates tempalteSlice={tempSlice} />
-              <Article articleSlice={articleSlice} />
-              <Screens screensImgSlice={screensImgSlice} />
+              <div>
+                <Templates tempalteSlice={tempSlice} />
+              </div>
+
+              <div>
+                <Article articleSlice={articleSlice} />
+              </div>
+              <div>
+                <Screens screensImgSlice={screensImgSlice} />
+              </div>
+
             </div>
           )}
-          {activeNavItem === 1 && <Templates tempalteSlice={template} />}
-          {activeNavItem === 2 && <Article articleSlice={Articles} />}
-          {activeNavItem === 3 && <Screens screensImgSlice={screensImg} />}
+          {activeNavItem === 1 && <div>
+            <Templates tempalteSlice={tempSlice} />
+          </div>}
+          {activeNavItem === 2 && <div>
+            <Article articleSlice={articleSlice} />
+          </div>}
+          {activeNavItem === 3 && <div>
+            <Screens screensImgSlice={screensImgSlice} />
+          </div>}
         </div>
       </div>
     </div>

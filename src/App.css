@@ -35,8 +35,14 @@
 .menu-item{
   margin-top:0!important;
 }
+.dark .menu-item:hover{
+  background-color: rgb(46, 46, 46);
+}
 .menu-item:hover a svg path{
   fill:#111;
+}
+.dark .menu-item:hover a svg path{
+  fill:white;
 }
 .mode-item-wrapper{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -51,10 +57,21 @@
   font-size: 14px;
   color: var(--textDark)!important;
 }
+.nav-item-ul li:hover{
+  background-color: var(--bgLite);
+}
+.nav-item-ul li a:hover{
+  color:#000;
+}
+.dark .nav-item-ul li a:hover{
+  color:#fff;
+}
+.dark .nav-item-ul li:hover{
+  background-color: rgb(46, 46, 46)!important;
+}
 .dark .nav-item-ul li:first-child{
-  background-color: var(--bgLiteDark)!important;
+  background-color: rgb(46, 46, 46)!important;
   font-size: 14px;
-  
 }
 .dark .nav-item-ul li:first-child a{
   color: var(--White)!important;
@@ -171,7 +188,9 @@
 }
 .the-pop-up .popup{
   width:520px;
+  padding-top:13px;
 }
+
 .the-pop-up .priceing{
   width:40rem!important;
 }
@@ -190,6 +209,22 @@
   background-color: black!important;
   color:var(--White)!important;
 }
+.screens-menu .slider-nav span{
+  font-size: 14px;
+}
+.screens-menu .slider-nav span:first-child{
+  background-color: #000;
+  color:#fff;
+}
+.dark .screens-menu .slider-nav span:first-child{
+  background-color: #fff;
+  color:#000;
+}
+.copy-btn-h{
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
 .search-nav-item span {
   border: 1px solid var(--bgLite);
   background-color: var(--White);
@@ -198,7 +233,9 @@
   background-color: var(--bgLite);
 }
 
-
+.template-page .template-title, .article-page .template-title{
+  display: none;
+}
 .temp-det-wrapper .template-title, .temp-det-wrapper .screens-menu {
   display:none;
 }
@@ -230,7 +267,15 @@
   overflow-y: scroll;
   height: 100vh;
 }
-
+.button-h{
+  height:49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-h{
+  height: 48px;
+}
 
 
 

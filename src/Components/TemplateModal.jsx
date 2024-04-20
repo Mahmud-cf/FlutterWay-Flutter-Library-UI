@@ -63,15 +63,15 @@ function TemplateModal({ mode, handleClosePopup, selectedItem }) {
             Sign in page
           </h2>
           <div className="flex items-center mb-5">
-            <button className="w-32 bg-black rounded-xl text-white p-2 font-semibold dark:bg-white dark:text-black  ">
+            <button className="w-32 button-h bg-black rounded-xl text-white p-2 font-semibold dark:bg-white dark:text-black  ">
               Copy code
             </button>
 
-            <button className="w-28 ml-4  bg-white rounded-xl text-black p-2 font-semibold button-border dark:bg-black">
+            <button className="w-28 ml-4 button-h bg-white rounded-xl text-black p-2 font-semibold button-border dark:bg-black">
               Copy link
             </button>
             <div
-              className="flex ml-5 border border-slid border-gray-200 cursor-pointer py-4 px-2 rounded-xl"
+              className="flex ml-5 border button-h border-slid border-gray-200 cursor-pointer py-4 px-2 rounded-xl"
               onClick={handleCopy}
             >
               <div className="w-2 h-2 mr-1 rounded-lg border-2 border-solid border-black dark:border-white"></div>
@@ -116,8 +116,8 @@ function TemplateModal({ mode, handleClosePopup, selectedItem }) {
           <div className="p-1 sm:p-3 border flex border-solid border-gray-200 rounded-xl">
             <img className="w-24 sm:w-40 rounded-md" src={tempItem.img} alt="" />
             <div className="ml-3">
-              <p className="text-lite text-sm">This screen is part of</p>
-              <h2 className="font-semibold mb-3 dark:text-white">
+              <p className="text-lite text-xs">This screen is part of</p>
+              <h2 className="font-medium mb-3 dark:text-white">
                 Shoplo - Shop Template
               </h2>
               <a

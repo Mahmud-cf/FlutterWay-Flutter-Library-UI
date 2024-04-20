@@ -9,6 +9,7 @@ import right from "../assets/right.png";
 import filter from "../assets/filter.png";
 import TemplateModal from "../Components/TemplateModal";
 import SlideNav from "../Components/SlideNav";
+import Templates from "../Components/Templates";
 
 function TemplatePage() {
   const [mode, setMode] = useState("light");
@@ -32,13 +33,13 @@ function TemplatePage() {
 
   return (
     <div className={`${mode === "dark" ? "dark" : ""}`}>
-      <div className="header-wrapper">
+      <div className="header-wrapper template-page ">
         <SideNav />
 
         <div className="p-1 sm:p-4 lg:ml-48">
           <Hero mode={mode} setMode={setMode} toggleMode={toggleMode} />
           <div className="my-3">
-            <div className="template-title flex justify-between items-center mb-3 mt-12">
+            <div className=" flex justify-between items-center mb-3 mt-12">
               <h2 className="text-2xl font-normal dark:text-white">
                 Templates
               </h2>
@@ -48,7 +49,7 @@ function TemplatePage() {
                 </p>
               </a>
             </div>
-            <div className="screens-menu flex items-center">
+            <div className="screens-menu flex items-center mb-4">
               <div className="filter-button">
                 <div className="flex justify-center items-center rounded-3xl bg-lite px-4 py-1">
                   <img src={filter} alt="" />
@@ -56,42 +57,13 @@ function TemplatePage() {
                 </div>
               </div>
               <SlideNav />
-            </div>
-            <div className="template-wrapper mt-3 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 ">
-              {template.map((tempItem) => (
-                <div key={tempItem.id} onClick={() => handleShowItem(tempItem)}>
-                  <img className="cursor-pointer" src={tempItem.img} alt="" />
-                  <div className="flex justify-between py-2">
-                    <h6 className="font-medium cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">
-                      {tempItem.title}
-                    </h6>
-                    <div className="flex items-center">
-                      <img
-                        className=" hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3"
-                        src={commentIcon}
-                        alt=""
-                      />
-                      <span className="hidden sm:inline-block xl:text-base lg:text-sm text-xs dark:text-white">
-                        {tempItem.comment}
-                      </span>
-                      <img
-                        className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3"
-                        src={downloadIcon}
-                        alt=""
-                      />
-                      <span className="hidden sm:inline-block xl:text-base lg:text-sm text-xs dark:text-white">
-                        {tempItem.download}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            </div >
+            <Templates tempalteSlice={template} />
             <div>
               <p className="text-center py-3 font-semibold">Loading...</p>
             </div>
             <div className="templates-docs mt-6">
-              <h2 className="text-xl font-medium pb-2 ">
+              <h2 className="text-2xl font-semibold pb-2 ">
                 How To Use Free Flutter Template
               </h2>
               <p className="text-lite text-sm md:text-base">

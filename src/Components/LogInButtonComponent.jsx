@@ -56,12 +56,11 @@ function LogInButtonComponent({ mode}) {
     setNewPassword(false);
     setCreateAccount(false);
     setPriceing(false);
-    setSearch(false);
   };
   return (
     <div className="flex" >
       <button
-        className="w-20 hidden res-button lg:block sm:w-24 ml-4 bg-white rounded-xl text-black p-2 sm:p-3 font-semibold button-border dark:bg-black "
+        className="w-20 hidden button-h res-button lg:block sm:w-24 ml-4 bg-white rounded-xl text-black p-2 sm:p-3 font-semibold button-border dark:bg-black "
         onClick={togglePopup}
       >
         Log in
@@ -95,7 +94,7 @@ function LogInButtonComponent({ mode}) {
       {newPassword && <NewPasswordPopup mode={mode} closePopup={closePopup} />}
 
       <button
-        className="w-24 hidden res-button lg:block lg:w-24 ml-4 bg-black hover:bg-zinc-600 transition-all rounded-xl text-white p-2 sm:p-3 font-semibold dark:bg-white dark:text-black "
+        className="w-24 hidden button-h res-button lg:block lg:w-24 ml-4 bg-black hover:bg-zinc-600 transition-all rounded-xl text-white p-2 sm:p-3 font-semibold dark:bg-white dark:text-black "
         onClick={togglePriceing}
       >
         Get Pro

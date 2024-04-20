@@ -30,6 +30,7 @@ function SideNav() {
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
+                  className="dark:fill-white"
                   d="M9.97434 1.66666H10.0253C11.2665 1.66666 12.2326 1.66665 13.01 1.72406C13.7989 1.78233 14.4429 1.90221 15.0297 2.16805C16.2727 2.73126 17.2686 3.72715 17.8318 4.97018C18.0976 5.55689 18.2175 6.20086 18.2758 6.98983C18.3332 7.7672 18.3332 8.73332 18.3332 9.97449V10.0255C18.3332 11.2667 18.3332 12.2327 18.2758 13.0102C18.2175 13.7991 18.0976 14.4431 17.8318 15.0298C17.2686 16.2728 16.2727 17.2687 15.0297 17.8319C14.4429 18.0977 13.7989 18.2177 13.01 18.2759C12.2326 18.3333 11.2665 18.3333 10.0253 18.3333H9.97434C8.73317 18.3333 7.76705 18.3333 6.98968 18.2759C6.20071 18.2177 5.55673 18.0977 4.97003 17.8319C3.727 17.2687 2.7311 16.2728 2.1679 15.0298C1.90206 14.4431 1.78218 13.7991 1.72391 13.0102C1.6665 12.2327 1.6665 11.2667 1.6665 10.0255V9.97449C1.6665 8.73332 1.6665 7.76721 1.72391 6.98983C1.78218 6.20086 1.90206 5.55688 2.1679 4.97018C2.7311 3.72715 3.727 2.73126 4.97003 2.16805C5.55674 1.90221 6.20071 1.78233 6.98968 1.72406C7.76705 1.66665 8.73317 1.66666 9.97434 1.66666ZM7.08175 2.97066C6.36205 3.02382 5.88285 3.12678 5.48591 3.30662C4.51911 3.74468 3.74453 4.51927 3.30648 5.48607C3.14444 5.84368 3.04481 6.2681 2.9878 6.87499H9.37484V2.91696C8.4175 2.91836 7.68304 2.92626 7.08175 2.97066ZM10.6248 2.91696V6.87499H17.0118C16.9548 6.2681 16.8553 5.84369 16.6932 5.48607C16.2552 4.51927 15.4806 3.74468 14.5138 3.30663C14.1168 3.12678 13.6376 3.02382 12.9179 2.97067C12.3167 2.92626 11.5822 2.91836 10.6248 2.91696ZM17.0728 8.12499H10.6248V11.875H17.0728C17.083 11.3463 17.0832 10.7313 17.0832 9.99999C17.0832 9.26866 17.083 8.65366 17.0728 8.12499ZM17.0118 13.125H10.6248V17.083C11.5822 17.0817 12.3167 17.0737 12.9179 17.0293C13.6376 16.9762 14.1168 16.8732 14.5138 16.6933C15.4806 16.2553 16.2552 15.4807 16.6932 14.5139C16.8553 14.1563 16.9548 13.7319 17.0118 13.125ZM9.37484 17.083V13.125H2.9878C3.04481 13.7319 3.14444 14.1563 3.30647 14.5139C3.74453 15.4807 4.51911 16.2553 5.48591 16.6933C5.88285 16.8732 6.36205 16.9762 7.08175 17.0293C7.68304 17.0737 8.4175 17.0817 9.37484 17.083ZM2.92694 11.875H9.37484V8.12499H2.92694C2.91664 8.65366 2.9165 9.26866 2.9165 9.99999C2.9165 10.7313 2.91664 11.3463 2.92694 11.875Z"
                   fill="#111111"
                 />
@@ -37,10 +38,10 @@ function SideNav() {
               <span className="ml-2">Discover</span>
             </a>
           </li>
-          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
+          <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2 lg:hover:bg-gray-100 dark:hover:bg-neutral-800  ">
             <a
               href="#"
-              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5  dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +63,7 @@ function SideNav() {
           <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +85,7 @@ function SideNav() {
           <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +107,7 @@ function SideNav() {
           <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +129,7 @@ function SideNav() {
           <li className="menu-item whitespace-nowrap lg:whitespace-normal pl-2">
             <a
               href="#"
-              className="flex lg:flex-row items-center p-2 lg:pl-5 dark:text-slate-300 lg:hover:bg-gray-100 hover:bg-slate-700 hover:text-white dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm lg:hover:text-black"
+              className="flex lg:flex-row items-center p-2 lg:pl-5 group font-normal text-sm lg:hover:text-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -152,10 +153,10 @@ function SideNav() {
           <h6 className="pl-5 dark:text-white ">All Screens</h6>
           {AllScreens.map((menuItem) => {
             return (
-              <li key={menuItem.id} className="menu-item">
+              <li key={menuItem.id} className="menu-item dark:hover:bg-neutral-800 dark:hover-text-white hover:bg-bg-gray-100">
                 <a
                   href="#"
-                  className="flex items-center p-2 px-5 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white group font-normal text-sm hover:text-black justify-between"
+                  className="flex items-center p-2 px-5  font-normal text-sm hover:text-black justify-between"
                 >
                   <span className="ml-2">{menuItem.name}</span>
                   <span>{menuItem.number}</span>

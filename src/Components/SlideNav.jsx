@@ -34,7 +34,7 @@ function SlideNav({mode}) {
     <div className="relative flex pb-2 overflow-x-hidden items-center">
       <div
         ref={navRef}
-        className="flex gap-1 items-center"
+        className="flex gap-1 items-center slider-nav"
         style={{ transform: `translateX(-${scrollPosition}px)` }}
       >
         {ScreensMenu.map((screenMenuItem) => (

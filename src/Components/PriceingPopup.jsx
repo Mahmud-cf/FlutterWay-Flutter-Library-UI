@@ -26,7 +26,7 @@ function PriceingPopup({mode, rightIcon, whiteRight, closePopup }) {
 
   return (
     <div className="the-pop-up fixed inset-0 z-50 flex items-center justify-center">
-      <div ref={popupRef} className="bg-white p-4 dark:bg-black rounded-2xl shadow-lg popup priceing relative">
+      <div ref={popupRef} className="bg-white p-4 md:overflow-y-scroll md:max-h-screen dark:bg-black rounded-2xl shadow-lg popup priceing relative">
         <div
           className=" absolute right-5 top-5 cursor-pointer"
           onClick={closePopup}
@@ -39,11 +39,11 @@ function PriceingPopup({mode, rightIcon, whiteRight, closePopup }) {
             Upgrade to access the full library.
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-2 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-5 ">
           <div className="priceing-month rounded-xl p-3">
-            <h2 className="text-md font-bold dark:text-white">Monthly</h2>
-            <h1 className="text-3xl my-3 dark:text-white">
-              $29<span className="text-xl">/monthly</span>
+            <h2 className="text-md font-bold sm-font dark:text-white">Monthly</h2>
+            <h1 className="text-2xl md:text-3xl my-3 dark:text-white">
+              $29<span className="text-base md:text-xl">/monthly</span>
             </h1>
             <ul className="dark:text-white">
               <li className="flex items-center">
@@ -83,8 +83,7 @@ function PriceingPopup({mode, rightIcon, whiteRight, closePopup }) {
             <div className="flex justify-between items-center">
               <h2 className="text-md font-bold dark:text-black ">Yearly</h2>
               <span
-                className="py-0 px-2 rounded-2xl dark:text-black"
-                style={{ border: "1px solid #fff" }}
+                className="py-0 px-2 rounded-2xl dark:text-black dark:border-black border border-solid border-white"
               >
                 Save 25%
               </span>

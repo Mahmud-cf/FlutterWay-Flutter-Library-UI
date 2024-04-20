@@ -92,11 +92,22 @@
     .hero-title p{
         font-size: 13px;
     }
-    .template-modal .popup{
-      width:20rem;
+    .the-pop-up .popup{
+      width:90%;
+      height:auto;
+    }
+    .the-pop-up .popup.priceing{
+      max-height: calc(100vh - 2rem);
+      width:90%!important;
     }
     .search-box{
       width:calc(100vw - 2rem)!important;
       left:-2px;
+    }
+    .the-pop-up .popup h2{
+      font-size: 20px;
+    }
+    .sm-font{
+      font-size: 14px!important;
     }
 } 

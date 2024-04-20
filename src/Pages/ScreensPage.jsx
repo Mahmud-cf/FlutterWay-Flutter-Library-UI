@@ -6,6 +6,8 @@ import { screensImg, template } from "../AllData";
 import shaddow from "../assets/shaddow.png";
 import copy from "../assets/book.png";
 import TemplateModal from "../Components/TemplateModal";
+import filter from "../assets/filter.png";
+import SlideNav from "../Components/SlideNav";
 
 function ScreensPage() {
   const [mode, setMode] = useState("light");
@@ -46,6 +48,7 @@ function ScreensPage() {
                 </p>
               </a>
             </div>
+    <SlideNav/>
             <div className="screens-image-wrapper grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4  lg:grid-cols-5 gap-2 mt-5">
         {screensImg.map((scrnImg) => (
           <div key={scrnImg.id}  onClick={() => handleShowItem(scrnImg)} className="mb-3 relative z-0 scrn-img scrnImg">
@@ -69,7 +72,7 @@ function ScreensPage() {
               <p className='text-center py-3 font-semibold' >Loading...</p>
             </div>
             <div className="templates-docs mt-6">
-              <h2 className="text-xl font-medium pb-2 ">
+              <h2 className="text-2xl font-semibold  pb-2 ">
                 How To Use Free Flutter Template
               </h2>
               <p className="text-lite">
