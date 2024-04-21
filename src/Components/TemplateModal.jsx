@@ -31,7 +31,7 @@ function TemplateModal({ mode, handleClosePopup, selectedItem }) {
 
 
   return (
-    <div className="the-pop-up template-modal fixed inset-0 z-50 flex items-center justify-end">
+    <div className="the-pop-up template-modal modal-h fixed inset-0 z-50 flex items-center justify-end">
       <div
         ref={popupRef}
         className="bg-white min-h-screen overflow-y-scroll dark:bg-black w-5/12 p-4 shadow-lg popup relative"

@@ -38,7 +38,7 @@ function ArticlePage() {
         <div className="p-1 sm:p-4 lg:ml-48">
           <Hero mode={mode} setMode={setMode} toggleMode={toggleMode} />
           <div className="my-6 article-page">
-            <div className="flex justify-between items-center mb-5">
+            <div className="flex justify-between items-center mt-24 sm:mt-20  mb-5">
               <h2 className="text-2xl font-normal dark:text-white">
                 Articles
               </h2>

@@ -75,6 +75,9 @@
         margin-top:10px;
         border-left:none;
       }
+      .language-javascript{
+        font-size: 12px!important;
+      }
 } 
 @media screen and (max-width:500px){
   body{
@@ -96,7 +99,10 @@
       width:90%;
       height:auto;
     }
-    .the-pop-up .popup.priceing{
+    .modal-h .popup{
+      height: calc(100vh - 1rem);
+    }
+    .the-pop-up .popup.priceing, .the-pop-up .search-popup{
       max-height: calc(100vh - 2rem);
       width:90%!important;
     }
@@ -109,5 +115,20 @@
     }
     .sm-font{
       font-size: 14px!important;
+    }
+    .header-wrapper h2{
+      font-size: 20px;
+    }
+    .header-wrapper a p{
+      font-size: 12px;
+    }
+    .sm-width{
+      width:100%;
+    }
+    .sm-width button{
+      width:49%;
+    }
+    .temp-det-intro{
+      padding-top:0;
     }
 } 

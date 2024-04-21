@@ -45,7 +45,7 @@ function TemplateDetails() {
                   stunning apps. The best part you can download beautiful.
                 </p>
               </div>
-              <div className="flex items-center mt-5 md:mt-0">
+              <div className="flex items-center mt-5 md:mt-0 sm-width">
                 <button className="w-36 button-h ml-0 md:ml-4 bg-white rounded-xl text-black p-2 font-semibold button-border dark:bg-black">
                   <div className="flex items-center">
                     <img src={eye} alt="" />
@@ -66,7 +66,7 @@ function TemplateDetails() {
                 <h2 className="text-2xl my-3 font-normal dark:text-white">
                   Overview
                 </h2>
-                <p className="text-base text-lite">
+                <p className="text-base text-lite mb-3">
                   Need a boost in your app design? Grab a free Flutter UI kit!
                   These handy Flutter UI libraries offer a variety of
                   pre-designed templates, making it easy for you to create

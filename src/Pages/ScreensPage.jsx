@@ -28,7 +28,7 @@ function ScreensPage() {
     setMode(newMode);
   };
 
-  
+
 
   return (
     <div className={`${mode === "dark" ? "dark" : ""}`}>
@@ -38,7 +38,7 @@ function ScreensPage() {
         <div className="p-1 sm:p-4 lg:ml-48">
           <Hero mode={mode} setMode={setMode} toggleMode={toggleMode} />
           <div className="my-6">
-            <div className="template-title flex justify-between items-center mb-5">
+            <div className="template-title flex justify-between items-center mt-16 sm:mt-12 mb-5">
               <h2 className="text-2xl font-normal dark:text-white">
                 Screens
               </h2>
@@ -48,26 +48,26 @@ function ScreensPage() {
                 </p>
               </a>
             </div>
-    <SlideNav/>
+            <SlideNav />
             <div className="screens-image-wrapper grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4  lg:grid-cols-5 gap-2 mt-5">
-        {screensImg.map((scrnImg) => (
-          <div key={scrnImg.id}  onClick={() => handleShowItem(scrnImg)} className="mb-3 relative z-0 scrn-img scrnImg">
-            <img className="cursor-pointer mx-auto" src={scrnImg.img} alt="" />
-            <img
-              className="absolute mx-auto left-0 right-0 z-10 shaddow-img bottom-0.5"
-              src={shaddow}
-              alt=""
-            />
-            <div className="scrn-button justify-between items-center">
-              <div className="hidden items-center bg-white rounded-md py-1 px-3 scrn-button-copy-img absolute z-20">
-                <img src={copy} alt="" />
-                <span>20</span>
-              </div>
-              <div className="hidden items-center bg-white rounded-md py-1 px-3 scrn-button-copy-button  absolute z-20" >Copy code</div>
+              {screensImg.map((scrnImg) => (
+                <div key={scrnImg.id} onClick={() => handleShowItem(scrnImg)} className="mb-3 relative z-0 scrn-img scrnImg">
+                  <img className="cursor-pointer mx-auto" src={scrnImg.img} alt="" />
+                  <img
+                    className="absolute mx-auto left-0 right-0 z-10 shaddow-img bottom-0.5"
+                    src={shaddow}
+                    alt=""
+                  />
+                  <div className="scrn-button justify-between items-center">
+                    <div className="hidden items-center bg-white rounded-md py-1 px-3 scrn-button-copy-img absolute z-20">
+                      <img src={copy} alt="" />
+                      <span>20</span>
+                    </div>
+                    <div className="hidden items-center bg-white rounded-md py-1 px-3 scrn-button-copy-button  absolute z-20" >Copy code</div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-        ))}
-      </div>
             <div>
               <p className='text-center py-3 font-semibold' >Loading...</p>
             </div>
@@ -85,10 +85,10 @@ function ScreensPage() {
             </div>
           </div>
           {showPopup && (
-        <div className="popup">
-          <TemplateModal handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
-        </div>
-      )}
+            <div className="popup">
+              <TemplateModal handleClosePopup={handleClosePopup} selectedItem={selectedItem} />
+            </div>
+          )}
           <Fotter />
         </div>
       </div>

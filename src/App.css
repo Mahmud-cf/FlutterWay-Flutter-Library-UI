@@ -212,9 +212,13 @@
 .screens-menu .slider-nav span{
   font-size: 14px;
 }
-.screens-menu .slider-nav span:first-child{
+.slider-nav span:first-child{
   background-color: #000;
   color:#fff;
+}
+.dark .slider-nav span:first-child{
+  background-color: #fff;
+  color:#000;
 }
 .dark .screens-menu .slider-nav span:first-child{
   background-color: #fff;

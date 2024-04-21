@@ -39,7 +39,7 @@ function TemplatePage() {
         <div className="p-1 sm:p-4 lg:ml-48">
           <Hero mode={mode} setMode={setMode} toggleMode={toggleMode} />
           <div className="my-3">
-            <div className=" flex justify-between items-center mb-3 mt-12">
+            <div className=" flex justify-between items-center mb-3 mt-24 sm:mt-20 lg:mt-12">
               <h2 className="text-2xl font-normal dark:text-white">
                 Templates
               </h2>
@@ -63,7 +63,7 @@ function TemplatePage() {
               <p className="text-center py-3 font-semibold">Loading...</p>
             </div>
             <div className="templates-docs mt-6">
-              <h2 className="text-2xl font-semibold pb-2 ">
+              <h2 className="text-xl sm:text-2xl font-semibold pb-2 ">
                 How To Use Free Flutter Template
               </h2>
               <p className="text-lite text-sm md:text-base">
