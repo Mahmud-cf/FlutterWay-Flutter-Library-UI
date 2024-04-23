@@ -33,7 +33,7 @@ function Templates({mode, tempalteSlice }) {
             </div>
             <div className="flex justify-between py-2">
               <h6 className="font-semibold cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.title}</h6>
-              <div className="flex items-center">
+              <div className="flex items-center overflow-x-hidden">
                 <img className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3" src={commentIcon} alt="" />
                 <span className="hidden sm:inline-block xl:text-sm lg:text-sm text-xs ml-1 dark:text-white">{tempItem.comment}</span>
                 <img className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3" src={downloadIcon} alt="" />
