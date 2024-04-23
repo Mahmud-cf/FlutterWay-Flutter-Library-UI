@@ -39,7 +39,7 @@ function SlideNav({mode}) {
       >
         {ScreensMenu.map((screenMenuItem) => (
           <span
-            className=" border border-solid border-gray-200 cursor-pointer hover:bg-zinc-100 py-1 px-3 rounded-3xl whitespace-nowrap dark:text-white dark:hover:text-black "
+            className=" border border-solid cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 py-1 px-3 rounded-3xl whitespace-nowrap border-sec dark:text-white"
             key={screenMenuItem.id}
           >
             {screenMenuItem.title}

@@ -15,14 +15,12 @@ import Article from "../Components/Article";
 import SyntextHighliter from "../Components/SyntextHighliter";
 import MyComponent from "../Components/SyntextHighliter";
 import SyntextCode from "../Components/SyntextCode";
+import { useTheme } from "../Context/Context";
 
 function ArticleDetails() {
-  const [mode, setMode] = useState("light");
+  const {mode, setMode, toggleMode} = useTheme()
   const tempalteSlice = template.slice(0, 3);
 
-  const toggleMode = (newMode) => {
-    setMode(newMode);
-  };
 
   const articleSlice = Articles.slice(0, 3);
   return (

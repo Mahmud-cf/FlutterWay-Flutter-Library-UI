@@ -26,7 +26,7 @@ function Article({articleSlice}) {
       </div>
       <div className="template-wrapper grid grid-cols-2 md:grid-cols-3 gap-4 ">
         {articleSlice.map((tempItem) => (
-          <div key={tempItem.id}  onClick={() => handleShowItem(tempItem)} className="sm:aspect-video" >
+          <div key={tempItem.id}  onClick={() => handleShowItem(tempItem)} className="sm:aspect-video set-aspect-ratio" >
             <img className="cursor-pointer hover:scale-105 transition-all" src={tempItem.img} alt="" />
             <div className="py-2">
                 <div className="text-lite text-xs mb-1" >

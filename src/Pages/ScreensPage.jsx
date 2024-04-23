@@ -8,9 +8,10 @@ import copy from "../assets/book.png";
 import TemplateModal from "../Components/TemplateModal";
 import filter from "../assets/filter.png";
 import SlideNav from "../Components/SlideNav";
+import { useTheme } from "../Context/Context";
 
 function ScreensPage() {
-  const [mode, setMode] = useState("light");
+  const {mode, setMode, toggleMode} = useTheme()
   const [showPopup, setShowPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -22,10 +23,6 @@ function ScreensPage() {
   const handleClosePopup = () => {
     setShowPopup(false);
     setSelectedItem(null);
-  };
-
-  const toggleMode = (newMode) => {
-    setMode(newMode);
   };
 
 

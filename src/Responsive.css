@@ -55,6 +55,7 @@
 }
 
 @media screen and (max-width:776px){
+  
     .hero-title .title-width{
         width:100%;
         padding-left:3rem;
@@ -80,8 +81,8 @@
       }
 } 
 @media screen and (max-width:500px){
-  body{
-    padding:5px;
+  .allwrapper{
+    padding:10px;
   }
     .hero-title .title-width{
         width:100%;

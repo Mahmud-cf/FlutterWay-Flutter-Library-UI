@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import searchIcon from "../assets/search.png";
 import logo from "../assets/favLogo.png";
 import LogInButtonComponent from "./LogInButtonComponent";
@@ -9,6 +9,7 @@ function Hero({ mode, setMode, toggleMode }) {
   const [modeItem, setModeItem] = useState(false);
   const [search, setSearch] = useState(false);
   const [menu, setMenu] = useState(false);
+  const popupRef = useRef(null);
 
   const handleMenu = ()=> {
     setMenu(!menu)
@@ -22,6 +23,28 @@ function Hero({ mode, setMode, toggleMode }) {
     setSearch(!search);
   };
 
+  useEffect(() => {
+    // Function to handle clicks outside the popup
+    function handleClickOutside(event) {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        showModeItem();
+      }
+    }
+
+    // Add event listener to the document body
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Remove event listener when the component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showModeItem]);
+
+
+  const handleNavItemClick = (index) => {
+    setActiveNavItem(index);
+  };
+
   return (
     <div>
       <div className="header-nav-wrapper mb-16 lg:mb-0 flex justify-between items-center">
@@ -29,7 +52,7 @@ function Hero({ mode, setMode, toggleMode }) {
           <div className="lg:hidden" ><a href="/"><img className="w-12" src={logo} alt="" /></a></div>
           <button
             type="button"
-            className="search-box flex items-center  dark:bg-neutral-800 dark:text-neutral-500  w-72 text-left space-x-3 px-4 h-12 bg-lite ring-0 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 shadow-sm rounded-3xl text-slate-400 dark:ring-0 dark:highlight-white/5 dark:hover:bg-slate-700"
+            className="search-box flex items-center secondery  w-72 text-left space-x-3 px-4 h-12 bg-lite ring-0 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 shadow-sm rounded-3xl text-slate-400 dark:ring-0 dark:highlight-white/5 text-sec"
             onClick={toggleSearch}
           >
             {mode ? (
@@ -78,6 +101,7 @@ function Hero({ mode, setMode, toggleMode }) {
             <div
               className="w-40 mode-item-wrapper absolute bg-white dark:bg-black"
               style={{ zIndex: "1000" }}
+              ref={popupRef}
             >
               <li
                 className="list-none p-1 px-2 flex items-center cursor-pointer "
@@ -157,13 +181,13 @@ function Hero({ mode, setMode, toggleMode }) {
             >
               <path
                 d="M0.5 16C0.5 7.43959 7.43959 0.5 16 0.5H32C40.5604 0.5 47.5 7.43959 47.5 16V32C47.5 40.5604 40.5604 47.5 32 47.5H16C7.43959 47.5 0.5 40.5604 0.5 32V16Z"
-                stroke="#F0F0F0"
+                stroke={mode === 'dark' ? '#2e2e2e': '#F0F0F0'}
               />
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M14 18C14 17.5858 14.3358 17.25 14.75 17.25H33.25C33.6642 17.25 34 17.5858 34 18C34 18.4142 33.6642 18.75 33.25 18.75H14.75C14.3358 18.75 14 18.4142 14 18ZM14 24C14 23.5858 14.3358 23.25 14.75 23.25H33.25C33.6642 23.25 34 23.5858 34 24C34 24.4142 33.6642 24.75 33.25 24.75H14.75C14.3358 24.75 14 24.4142 14 24ZM14 30C14 29.5858 14.3358 29.25 14.75 29.25H33.25C33.6642 29.25 34 29.5858 34 30C34 30.4142 33.6642 30.75 33.25 30.75H14.75C14.3358 30.75 14 30.4142 14 30Z"
-                fill={mode === 'dark' ? '#fff' : '#000'}
+                fill={mode === 'dark' ? '#F0F0F0' : '#111'}
               />
             </svg>
           </button>

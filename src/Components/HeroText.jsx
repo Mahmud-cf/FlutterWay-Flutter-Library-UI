@@ -8,7 +8,7 @@ function HeroText() {
             Build your next App <br />
             even faster!
           </h1>
-          <p className="text-lite dark:text-stone-300">
+          <p className="text-lite">
             Beautifully designed, expertly crafted Flutter components and
             templates, to jumpstart your projects and speed up your development
             process.

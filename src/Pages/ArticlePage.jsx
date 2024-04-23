@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SideNav from '../Components/SideNav';
 import Hero from '../Components/Hero';
-import { Articles } from '../AllData';
+import { Articles, darkArticles } from '../AllData';
 import commentIcon from "../assets/comment.png";
 import downloadIcon from "../assets/download.png";
 import Fotter from '../Components/Fotter';
@@ -9,12 +9,14 @@ import TemplateModal from '../Components/TemplateModal';
 import SlideNav from '../Components/SlideNav';
 import filter from "../assets/filter.png";
 import Article from '../Components/Article';
+import { useTheme } from '../Context/Context';
 
 function ArticlePage() {
-  
-  const [mode, setMode] = useState("light");
+  const {mode, setMode, toggleMode} = useTheme()
   const [showPopup, setShowPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+
+  const articleSlice = mode === 'dark' ? darkArticles : Articles
 
   const handleShowItem = (tempItem) => {
     setSelectedItem(tempItem);
@@ -27,9 +29,6 @@ function ArticlePage() {
   };
   
 
-  const toggleMode = (newMode) => {
-    setMode(newMode);
-  };
   return (
     <div className={`${mode === "dark" ? "dark" : ""}`}>
       <div className="header-wrapper">
@@ -57,7 +56,7 @@ function ArticlePage() {
               </div>
               <SlideNav />
             </div >
-            <Article articleSlice={Articles} />
+            <Article articleSlice={articleSlice} />
             <div>
               <p className='text-center py-3 font-semibold' >Loading...</p>
             </div>

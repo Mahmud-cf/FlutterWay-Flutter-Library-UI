@@ -35,9 +35,9 @@ function Templates({mode, tempalteSlice }) {
               <h6 className="font-semibold cursor-pointer xl:text-base lg:text-sm text-xs dark:text-white">{tempItem.title}</h6>
               <div className="flex items-center">
                 <img className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3" src={commentIcon} alt="" />
-                <span className="hidden sm:inline-block xl:text-sm lg:text-sm text-xs dark:text-white">{tempItem.comment}</span>
+                <span className="hidden sm:inline-block xl:text-sm lg:text-sm text-xs ml-1 dark:text-white">{tempItem.comment}</span>
                 <img className="hidden sm:inline-block w-4 h-4 lg:w-5 lg:h-5 ml-3" src={downloadIcon} alt="" />
-                <span className="hidden sm:inline-block xl:text-sm lg:text-sm text-xs dark:text-white">{tempItem.download}</span>
+                <span className="hidden sm:inline-block xl:text-sm lg:text-sm text-xs ml-1 dark:text-white">{tempItem.download}</span>
               </div>
             </div>
           </div>
