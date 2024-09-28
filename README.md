@@ -1,7 +1,7 @@
 
 # Flutter Way
 
-Flutter Way job task for front-end web developer.
+Flutter library UI design from figma.
 
 
 ## Live
