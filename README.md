@@ -4,9 +4,9 @@
 Flutter Way job task for front-end web developer.
 
 
-## Demo
+## Live
 
-https://flutter-way.netlify.app/
+https://www.flutterlibrary.com/
 
 
 ## Features
